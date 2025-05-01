@@ -1,0 +1,3 @@
+baseurl = "https://beautify.gushao.club/"
+canonifyURLs = false
+sectionPagesMenu = "main"

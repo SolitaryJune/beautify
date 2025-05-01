@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>美化研究社区</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 40px auto;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            color: #333;
+        }
+        .progress-container {
+            margin-top: 15px;
+        }
+        .progress-container h3 {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        .progress-bar-background {
+            width: 100%;
+            background-color: #eee;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .progress-bar {
+            background-color: #4CAF50;
+            height: 100%;
+            width: 0%;
+        }
+        .file-result {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .merged-files {
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>美化研究社区</h1>
+    <div class="container">
+        <label for="secret_key">上传密钥：</label>
+        <input type="text" id="secret_key" placeholder="请输入密钥" required>
+
+        <label for="files">选择文件（可多选）：</label>
+        <input type="file" id="files" multiple required>
+
+        <button id="startUpload">开始上传</button>
+
+        <div id="result"></div>
+    </div>
+
+    <footer>
+        &copy; <span id="currentYear">2025</span> GuShao's Beautify Service | 由 <a
+          href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=3567055800">孤傲</a> 强力驱动
+      </footer>
+    
+    
+       <script>
+        // 检查来源，如果不是来自 skin.gushao.club 则重定向
+        if (!document.referrer.includes('skin.gushao.club')) {
+            window.location.href = 'https://skin.gushao.club';
+        }
+
+        // 设置当前年份
+        (function () {
+            document.getElementById("currentYear").innerText = new Date().getFullYear();
+        })();
+    </script>
+    <script type="text/javascript">
+        document.write("<script src='script.js?" + Math.random() + "'><\/script>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+git<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>素材分割Free</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9848692070506076"
+    crossorigin="anonymous"></script>
+    <script src="https://skin.gushao.club/utils/av-min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        #canvas, #preview canvas {
+            max-width: 100%;
+            border: 1px dashed #ccc;
+            margin: 5px;
+        }
+        #downloadLink {
+            display: none;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        #preview {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        #authForm {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        #authForm input {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-right: 10px;
+            width: 250px;
+        }
+        #authForm button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #authForm button:hover {
+            background-color: #45a049;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>素材分割Free</h1>
+    
+    <div id="authForm">
+        <p>请输入验证密钥以使用素材分割功能</p>
+        <input type="text" id="authKey" placeholder="输入验证密钥">
+        <button type="button" id="verifyBtn">验证</button>
+    </div>
+    
+    <div id="appContent" class="hidden">
+        <input type="file" id="imageUpload" accept="image/*">
+        <canvas id="canvas"></canvas>
+        <div id="preview"></div>
+        <a id="downloadLink" href="#" download="sprites.zip">下载压缩包</a>
+    </div>
+    <footer>
+        &copy; <span id="currentYear">2025</span> GuShao's Beautify Service | 由 <a
+          href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=3567055800">孤傲</a> 强力驱动
+      </footer>
+    
+    
+       <script>
+        // 检查来源，如果不是来自 skin.gushao.club 则重定向
+        if (!document.referrer.includes('skin.gushao.club')) {
+            window.location.href = 'https://skin.gushao.club';
+        }
+
+        // 设置当前年份
+        (function () {
+            document.getElementById("currentYear").innerText = new Date().getFullYear();
+        })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script type="text/javascript">
+        document.write("<script src='script.js?" + Math.random() + "'><\/script>");
+    </script>
+  </body>
+</html>

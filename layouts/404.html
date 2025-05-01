@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="row justify-content-center">
+  <div class="col-md-12 col-lg-10 col-xl-8">
+    <article>
+      <h1 class="text-center">404 - Page Not Found :(</h1>
+      <h2 class="text-center">404 - 页面未找到</h2>
+      <p class="text-center">The page you are looking for doesn't exist or has been moved.</p>
+      <p class="text-center">您查找的页面不存在或已被移动。</p>
+      <p class="text-center">You will be redirected to the homepage in 5 seconds...</p>
+      <p class="text-center">5秒后将跳转至主页...</p>
+      <p class="text-center">
+        <a href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=3567055800">联系孤傲</a>
+      </p>
+    </article>
+  </div>
+</div>
+<script>
+  setTimeout(function() {
+    window.location.href = 'http://skin.gushao.club';
+  }, 5000);  // 5秒后跳转
+</script>
+{{ end }}

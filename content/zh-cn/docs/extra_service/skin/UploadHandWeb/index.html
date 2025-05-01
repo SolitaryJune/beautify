@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>在线文件打标</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9848692070506076"
+    crossorigin="anonymous"></script>
+    <script src="https://skin.gushao.club/utils/av-min.js"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- 引入 SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(to right, #ece9e6, #ffffff);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+        margin-bottom: 20px;
+      }
+
+      input[type="file"],
+      select,
+      textarea,
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        font-size: 1rem;
+        background-color: #f9f9f9;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        width: 100%;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+        box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+      }
+
+      #loading-spinner {
+        display: none;
+        border: 8px solid #f3f3f3; /* Light grey */
+        border-top: 8px solid #007bff; /* Blue */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        margin: 20px auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      #result {
+        margin-top: 15px;
+        color: #333;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>在线文件打标</h1>
+
+    <!-- 登录表单 -->
+    <form id="loginForm">
+      <label for="timestampInput">密钥：</label>
+      <input type="text" id="timestampInput" name="timestampInput" required />
+      <button type="button" onclick="verifyKey()">验证密钥</button>
+    </form>
+
+    <!-- 文件上传表单，默认隐藏 -->
+    <form id="uploadForm" style="display: none">
+      <label for="upload_type">上传类型：</label>
+      <select
+        id="upload_type"
+        name="upload_type"
+        required
+        onchange="toggleInputFields()"
+      >
+        <option value="single">打标（支持批量）</option>
+        <option value="batch">一对一邮箱推送</option>
+      </select>
+      <label for="mail">接收邮箱：</label>
+      <textarea
+        id="mail"
+        name="mail"
+        rows="1"
+        placeholder="输入邮箱"
+        required
+        oninput="autoResize(this)"
+      ></textarea>
+      <label for="messages">标记内容(支持批量，一行一个)：</label>
+      <textarea
+        id="messages"
+        name="messages"
+        rows="1"
+        placeholder="输入标记内容"
+        required
+        oninput="autoResize(this)"
+      ></textarea>
+      <label for="file">选择文件上传：</label>
+      <input type="file" id="file" name="file" required />
+      <button type="button" onclick="uploadFile()">开始处理文件</button>
+
+      <!-- 加载动画 -->
+      <div id="loading-spinner"></div>
+    </form>
+
+    <div id="result"></div>
+
+    <footer>
+      &copy; <span id="currentYear">2025</span> GuShao's Beautify Service | 由 <a
+        href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=3567055800">孤傲</a> 强力驱动
+    </footer>
+   
+    </div>
+  <script>
+ const img = new Image();
+    img.onload = () => {
+      console.log('服务器可用');
+    };
+    img.onerror = () => {
+      Swal.fire({
+        icon: 'error',
+        title: '当前云服务器维护当中',
+        text: '请稍后再试吧！',
+        confirmButtonText: '我知道了'
+      });
+    };
+    // 添加一个随机参数避免缓存
+    img.src = 'https://skin-api-sq.gushao.club/favicon.ico?_=' + Date.now();
+        // 检查来源，如果不是来自 skin.gushao.club 则重定向
+        if (!document.referrer.includes('skin.gushao.club')) {
+            window.location.href = 'https://skin.gushao.club';
+        }
+
+        // 设置当前年份
+        (function () {
+            document.getElementById("currentYear").innerText = new Date().getFullYear();
+        })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+   
+    <script type="text/javascript">
+      document.write("<script src='script.js?" + Math.random() + "'><\/script>");
+  </script>
+  </body>
+</html>

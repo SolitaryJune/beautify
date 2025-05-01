@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>美化研究社区 —— 会员管理系统</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* 添加头像样式 */
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+            border: 2px solid #5bc0de;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        /* 其他样式保持不变 */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #5bc0de;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #46a9d3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. 输入密钥区域 -->
+    <div class="container" id="secretKeyContainer">
+        <!-- 添加网站logo -->
+        <div style="text-align: center; margin-bottom: 15px;">
+            <img src="https://skin.gushao.club/android-chrome-192x192.png" alt="美化研究社区Logo"
+                style="width: 64px; height: 64px;">
+        </div>
+        <h1>美化研究社区 —— 会员管理系统</h1>
+        <label for="secretKeyInput">密钥 </label>
+        <input type="text" id="secretKeyInput" placeholder="请输入密钥">
+        <button id="verifyBtn">验证密钥</button>
+        <footer>
+            &copy; <span id="currentYear">2025</span> GuShao's Beautify Service | 由 <a
+                href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=3567055800">孤傲</a> 强力驱动
+        </footer>
+    </div>
+
+    <!-- 2. 管理员面板：修改Pro/手动标记，添加指定QQ+群号，查看/改/删群权限 -->
+    <div class="container" id="adminContainer" style="display:none;">
+        <h1>管理员面板</h1>
+
+        <!-- 添加用户信息和头像区域 -->
+        <div class="user-info">
+            <img id="adminAvatar" class="avatar" src="" alt="头像">
+            <div>
+                <h3 id="adminQQDisplay"></h3>
+                <p>身份：管理员</p>
+            </div>
+        </div>
+
+        <!-- (a) 添加群权限：指定 QQ号 + 群号 -->
+        <div class="box">
+            <h3>添加群号 (指定 QQ + 群号)</h3>
+            <label for="adminTargetQQ">目标QQ号：</label>
+            <input type="text" id="adminTargetQQ" placeholder="如 123456">
+            <label for="adminGroupNumber">群号：</label>
+            <input type="text" id="adminGroupNumber" placeholder="如 10000">
+            <button id="adminAddGroupBtn">添加群号</button>
+        </div>
+
+        <div id="adminAllUsersWrapper"></div>
+    </div>
+
+    <!-- 3. 普通/Pro用户面板：添加群号(只需群号)，查看/改/删自己权限 -->
+    <div class="container" id="userContainer" style="display:none;">
+        <h1>我的群权限</h1>
+
+        <!-- 添加用户信息和头像区域 -->
+        <div class="user-info">
+            <img id="userAvatar" class="avatar" src="" alt="头像">
+            <div>
+                <h3 id="userQQDisplay"></h3>
+                <p id="userTypeDisplay"></p>
+            </div>
+        </div>
+
+        <!-- (a) 添加群号：只填 群号 -->
+        <div class="box">
+            <h3>添加群号 (仅加到自己)</h3>
+            <label for="userGroupNumber">群号：</label>
+            <input type="text" id="userGroupNumber" placeholder="如 12345">
+            <button id="userAddGroupBtn">添加群号</button>
+        </div>
+
+        <div id="userWrapper"></div>
+
+    </div>
+
+    <script>
+        // 设置当前年份
+        (function () {
+            document.getElementById("currentYear").innerText = new Date().getFullYear();
+        })();
+    </script>
+    <script type="text/javascript">
+        document.write("<script src='script.js?" + Math.random() + "'><\/script>");
+    </script>
+</body>
+
+</html>

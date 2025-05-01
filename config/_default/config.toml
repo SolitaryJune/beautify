@@ -1,0 +1,84 @@
+baseurl = "/"
+canonifyURLs = false
+defaultContentLanguage = 'zh-cn'
+disableAliases = true
+disableHugoGeneratorInject = true
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+languageCode = "zh-cn"
+paginate = 7
+refLinksErrorLevel = 'WARNING'
+rssLimit = 10
+# defaultContentLanguageInSubdir = true
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS", "SITEMAP"]
+
+# add output format for section sitemap.xml
+[outputFormats.SITEMAP]
+mediaType = "application/xml"
+baseName = "sitemap"
+isHTML = false
+isPlainText = true
+noUgly = true
+rel  = "sitemap"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      linkify = false
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    codeFences = false
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    style = "dracula"
+    tabWidth = 4
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# [taxonomies]
+  # contributor = "contributors"
+
+[permalinks]
+
+
+[minify.tdewolff.html]
+  keepWhitespace = false
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.80.0"
+    max = ""
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "node_modules/flexsearch"
+    target = "assets/js/vendor/flexsearch"
+  [[module.mounts]]
+    source = "node_modules/katex"
+    target = "assets/js/vendor/katex"
+  [[module.mounts]]
+    source = "node_modules/mermaid"
+    target = "assets/js/vendor/mermaid"

@@ -1,0 +1,88 @@
+# Meta Data for SEO
+
+## Homepage
+title = "GuShao's Beautify"
+titleSeparator = "-"
+titleAddition = "文档"
+description = "GuShao's Beautify"
+
+## Open Graph
+images = ["Logo.png"]
+ogLocale = "zh_cn"
+ogImageHeight = "320"
+ogImageWidth = "640"
+domainTLD = "skin.gushao.club"
+titleHome = "GuShao's Beautify Doc"
+
+## Twitter Cards
+twitterSite = ""
+twitterCreator = ""
+
+## JSON-LD
+schemaType = "Organization"
+schemaName = "v2rayA"
+schemaAuthor = "v2rayA"
+schemaAuthorTwitter = ""
+schemaAuthorLinkedIn = ""
+schemaAuthorGitHub = "https://github.com/SolitaryJune/SkinIntroduce"
+schemaLocale = "zh-CN"
+schemaLogo = "android-chrome-512x512.png"
+schemaLogoWidth = 512
+schemaLogoHeight = 512
+schemaImage = "Logo.png"
+schemaImageWidth = 289
+schemaImageHeight = 117
+schemaTwitter = ""
+schemaLinkedIn = ""
+schemaGitHub = "https://skin.gushao.club"
+schemaSection = "blog"
+
+## Sitelinks Search Box
+siteLinksSearchBox = false
+
+## Chrome Browser
+themeColor = "#fff"
+
+# Images
+quality = 85
+bgColor = "#fff"
+landscapePhotoWidths = [900, 800, 700, 600, 500]
+portraitPhotoWidths = [800, 700, 600, 500]
+lqipWidth = "20x"
+
+# Footer
+footer = "CL-EULA | Copyright (c) 2021 - {year} GuShao's Beautify Organization"
+copyright = "Copyright (c) 2021 - {year} GuShao's Beautify Organization"
+
+# Alert
+alert = false
+alertText = "Like v2rayA? <a class=\"alert-link\" href=\"https://github.com/v2rayA/v2rayA/stargazers\">Star on GitHub</a>. Thanks!</a>"
+
+# Edit Page
+docsRepo = "https://github.com/SolitaryJune/SkinIntroduce"
+editPage = true
+
+# Contributors
+githubContributors = false
+githubUser = "GuShao's Beautify"
+githubRepo = "GuShao's Beautify"
+githubDocRepo = "solitaryjune.github.io"
+githubDocTree = "main"
+githubContributorsAPI = ""
+
+[options]
+  lazySizes = true
+  clipBoard = true
+  instantPage = true
+  flexSearch = true
+  darkMode = true
+  bootStrapJs = true
+  breadCrumb = true
+  highLight = true
+  kaTex = true
+  collapsibleSidebar = true
+  docsNavigation = true
+  lastModified = true
+
+[dateFormat]
+lastUpdated = "2006年01月02日 15:04:05 MST"

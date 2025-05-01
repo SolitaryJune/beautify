@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>打标强度测试工具</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9848692070506076"
+     crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1,
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #message {
+      margin-top: 10px;
+      color: red;
+    }
+
+    #uploadSection {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: #f3f3f3;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    .progress-bar div {
+      height: 10px;
+      background-color: #007bff;
+      width: 0%;
+      border-radius: 4px;
+      transition: width 0.4s ease;
+    }
+
+    #uploadMessage {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="loginSection">
+      <h1>登录</h1>
+      <form id="loginForm">
+        <label for="tel">手机号:</label>
+        <input type="text" id="tel" name="tel" required />
+        <button type="button" id="sendSmsBtn">发送短信验证码</button>
+        <div id="smsStatus"></div>
+        <label for="code" id="codeLabel" style="display: none">验证码:</label>
+        <input type="text" id="code" name="code" style="display: none" required />
+        <button type="submit" id="submitBtn" style="display: none">
+          登录
+        </button>
+      </form>
+      <div id="message"></div>
+    </div>
+
+    <div id="uploadSection">
+      <h2>文件上传</h2>
+      <form id="uploadForm">
+        <label for="fileInput">选择文件:</label>
+        <input type="file" id="fileInput" accept=".bds,.bdi,.it,.zip" required />
+        <button type="submit">上传文件</button>
+      </form>
+      <div class="progress-bar" id="progressBar">
+        <div></div>
+      </div>
+      <div id="uploadMessage"></div>
+    </div>
+    <footer>
+      &copy; <span id="currentYear">2025</span> GuShao's Beautify Service | 由 <a
+        href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=3567055800">孤傲</a> 强力驱动
+    </footer>
+
+
+
+  </div>
+  <script>
+        // 检查来源，如果不是来自 skin.gushao.club 则重定向
+        if (!document.referrer.includes('skin.gushao.club')) {
+            window.location.href = 'https://skin.gushao.club';
+        }
+
+        // 设置当前年份
+        (function () {
+            document.getElementById("currentYear").innerText = new Date().getFullYear();
+        })();
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+  <!-- <script src="script.js"></script> -->
+  <script type="text/javascript">
+    document.write("<script src='script.js?" + Math.random() + "'><\/script>");
+  </script>
+</body>
+
+</html>
