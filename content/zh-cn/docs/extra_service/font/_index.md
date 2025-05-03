@@ -1,6 +1,6 @@
 ---
-title: "额外功能|皮肤|图片等"
-description: "皮肤|图片等"
+title: "额外功能|字体"
+description: "字体"
 lead: ""
 date: 2020-11-16T13:59:39+01:00
 lastmod: 2020-11-16T13:59:39+01:00
@@ -9,6 +9,6 @@ images: []
 menu:
   docs:
     parent: "extra_service"
-    identifier: "skin"
+    identifier: "font"
 weight: 15
 ---
