@@ -11,13 +11,13 @@ identifier = "mark_use"
 url = "/docs/mark_use/"
 
 [[docs]]
-name = "会员|使用 皮肤/打标 服务"
+name = "打标会员|使用 打标 服务"
 weight = 30
 identifier = "mark_user"
 url = "/docs/mark_user/"
 
 [[docs]]
-name = "额外功能|Logo/前景等"
+name = "额外功能"
 weight = 30
 identifier = "extra_service"
 url = "/docs/extra_service/" 
