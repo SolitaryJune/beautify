@@ -8,7 +8,7 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "mark_user"
+    parent: "skin_user"
     weight: 60
 toc: true
 ---

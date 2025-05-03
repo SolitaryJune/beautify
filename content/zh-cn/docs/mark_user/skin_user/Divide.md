@@ -1,5 +1,5 @@
 ---
-title : "阅览、推荐打标机 | 获得分成"
+title : "阅览、推荐打标机 皮肤|图片素材 | 获得分成"
 description: "作者 ｜ 孤傲"
 lead: "作者 ｜ 孤傲"
 date: 2021-08-19T08:49:31+00:00
@@ -8,7 +8,7 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "mark_user"
+    parent: "skin_user"
     weight: 840
 toc: true
 ---
