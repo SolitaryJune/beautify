@@ -9,6 +9,6 @@ images: []
 menu:
   docs:
     parent: "mark_user"
-    identifier: "skin"
+    identifier: "skin_user"
 weight: 15
 ---
