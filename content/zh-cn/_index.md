@@ -1,5 +1,5 @@
 ---
-title: "GuShao's Beautify 创造，为了无法创造的价值"
+title: "GuShao's Beautify ———— 创造，为了无法创造的价值"
 description: "全方位皮肤、字体、音效打标与美化服务，支持多平台，功能持续升级。"
 lead: "一站式打标与美化服务，满足多样化需求，体验极致便捷。"
 draft: false
