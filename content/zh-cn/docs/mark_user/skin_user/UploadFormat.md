@@ -45,7 +45,7 @@ toc: true
 ### 额外授权：
 
 请邀请 **孤傲** 和 **XiuXinBot** 进群，**孤傲** 将授权机器人权限。  
-更多信息请参阅：[二次鉴权 | 添加黑名单账号 →](https://skin.gushao.club/docs/mark_user/skinbatch/Authentication/)
+更多信息请参阅：[二次鉴权 | 添加黑名单账号 →](https://beautify.gushao.club/docs/mark_user/skinbatch/Authentication/)
 
 ---
 
@@ -68,4 +68,4 @@ toc: true
 ### 额外授权：
 
 请邀请 **孤傲** 和 **XiuXinBot** 进群，**孤傲** 将授权机器人权限。  
-更多信息请参阅：[二次鉴权 | 添加黑名单账号 →](https://skin.gushao.club/docs/mark_user/skinbatch/Authentication/)
+更多信息请参阅：[二次鉴权 | 添加黑名单账号 →](https://beautify.gushao.club/docs/mark_user/skinbatch/Authentication/)

@@ -15,8 +15,8 @@ weight: 830
 
 ### 打前景Free
 
-打前景Pro，支持导入til[打前景Pro →](https://skin.gushao.club/docs/extra_service/skin/skinforward/) 。
+打前景Pro，支持导入til[打前景Pro →](https://beautify.gushao.club/docs/extra_service/skin/skinforward/) 。
 
 点击跳转[视频教程 (访问密码: WXJuneOver24) →](https://url69.ctfile.com/d/22031369-65046580-3246ae?p=WXJuneOver24) 。
 
-点击跳转[打前景Free →](https://skin.gushao.club/docs/public_service/SkinForward/) 。
+点击跳转[打前景Free →](https://beautify.gushao.club/docs/public_service/SkinForward/) 。

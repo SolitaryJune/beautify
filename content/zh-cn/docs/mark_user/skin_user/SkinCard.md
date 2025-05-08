@@ -26,7 +26,7 @@ toc: true
 ### 📤 上传方式
 
 上传方式：**公众号上传**  
-🔗 [点击跳转 →](https://skin.gushao.club/docs/mark_user/upland/#%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8A%E4%BC%A0)
+🔗 [点击跳转 →](https://beautify.gushao.club/docs/mark_user/upland/#%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8A%E4%BC%A0)
 
 ### 🔄 标准上传流程
 
@@ -53,4 +53,4 @@ toc: true
 
 ## 🏪 上架到阿奇索
 
-![上架到阿奇索](https://skin.gushao.club/docs/mark_user/SkinCard/image.png)
+![上架到阿奇索](https://beautify.gushao.club/docs/mark_user/SkinCard/image.png)

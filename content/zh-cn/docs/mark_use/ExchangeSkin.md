@@ -63,6 +63,6 @@ weight: 830
 
 ## 卡密兑换
 
-兑换网址**点击跳转**。[卡密兑换 →](https://skin.gushao.club/docs/mark_use/Redeem/)。
+兑换网址**点击跳转**。[卡密兑换 →](https://beautify.gushao.club/docs/mark_use/Redeem/)。
 
 获取流程为**输入邮箱和皮肤管理系统生成的卡密” —— 等待邮箱 —— 获得文件链接 —— 下载皮肤 —— 将皮肤分享到QQ|WX，从QQ|WX导入到输入法 —— 应用**

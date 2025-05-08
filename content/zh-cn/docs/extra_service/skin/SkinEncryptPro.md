@@ -15,14 +15,14 @@ weight: 830
 
 ### 皮肤加密Pro（定价35元永久授权，全设备通用）
 
-已购买打标机用户可免费获取密钥，前往[额外功能页面](https://skin.gushao.club/docs/mark_user/useextraservice/)领取。
+已购买打标机用户可免费获取密钥，前往[额外功能页面](https://beautify.gushao.club/docs/mark_user/useextraservice/)领取。
 
 ---
 
 #### 功能入口
 
-- 官方通道：[皮肤加密Pro](https://skin.gushao.club/docs/extra_service/skin/SkinEncryptPro)
-- 备用通道：[皮肤加密Pro Mirror](https://skin.gushao.club/docs/extra_service/skin/SkinEncryptProMirror)
+- 官方通道：[皮肤加密Pro](https://beautify.gushao.club/docs/extra_service/skin/SkinEncryptPro)
+- 备用通道：[皮肤加密Pro Mirror](https://beautify.gushao.club/docs/extra_service/skin/SkinEncryptProMirror)
 - 备用通道2：[皮肤加密Pro Mirror2](https://skin-mirror.gushao.club/docs/extra_service/skin/SkinEncryptPro)
 
 > **自动授权提示**  

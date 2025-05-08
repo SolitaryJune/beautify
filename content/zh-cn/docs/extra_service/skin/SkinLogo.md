@@ -16,13 +16,13 @@ weight: 830
 ### 重要说明
 
 **注：** 此功能定价 **15 元永久**，支持所有设备。  
-已购买打标机用户无需购买，获取密钥请访问 → [使用额外功能](https://skin.gushao.club/docs/mark_user/useextraservice/)。
+已购买打标机用户无需购买，获取密钥请访问 → [使用额外功能](https://beautify.gushao.club/docs/mark_user/useextraservice/)。
 
 ---
 
 ### 功能入口
 
-立即使用 → [一键换Logo/底包切片合成/批量重命名/wx批量换素材](https://skin.gushao.club/docs/extra_service/skin/SkinLogo)
+立即使用 → [一键换Logo/底包切片合成/批量重命名/wx批量换素材](https://beautify.gushao.club/docs/extra_service/skin/SkinLogo)
 
 ---
 
@@ -50,14 +50,14 @@ weight: 830
 
 **Q:** 为什么某些素材/Logo无法被替换/解压文件为空？  
 **A:**  
-请使用 **[Logo尺寸检测工具](https://skin.gushao.club/docs/public_service/LogoCheck/)** 检查：
+请使用 **[Logo尺寸检测工具](https://beautify.gushao.club/docs/public_service/LogoCheck/)** 检查：
 
 - 原素材宽高像素值  
 - 替换尺寸是否与原素材一致  
 
 **Q:** 如何解决素材/Logo无法替换的问题？  
 **A:**  
-方案一：使用 **[图命灵变Pro](https://skin.gushao.club/docs/extra_service/skin/picmagicpro/)** 调整替换尺寸  
+方案一：使用 **[图命灵变Pro](https://beautify.gushao.club/docs/extra_service/skin/picmagicpro/)** 调整替换尺寸  
 方案二：删除不合规的素材/Logo  
 
 ---

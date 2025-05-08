@@ -15,4 +15,4 @@ toc: true
 
 ### 注：仅支持新版查询
 
-如果你想查询标记，请点击[查询标记网址](https://skin.gushao.club/docs/mark_user/SkinCheck/) 上传文件检测即可。
+如果你想查询标记，请点击[查询标记网址](https://beautify.gushao.club/docs/mark_user/SkinCheck/) 上传文件检测即可。

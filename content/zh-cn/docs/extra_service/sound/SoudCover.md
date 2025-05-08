@@ -15,7 +15,7 @@ weight: 830
 
 ### 音效转换 定价45r永久（支持所有设备）
 
-如果你想要更多自定义，欢迎使用[图片水印Pro →](https://skin.gushao.club/docs/extra_service/skin/SkinWaterPro/)。
+如果你想要更多自定义，欢迎使用[图片水印Pro →](https://beautify.gushao.club/docs/extra_service/skin/SkinWaterPro/)。
 
 ---
 
@@ -30,7 +30,7 @@ weight: 830
 ### 使用教程  
 
 **已购买打标机用户无需购买此功能，获取密钥请参考：**  
-[使用额外功能指南 →](https://skin.gushao.club/docs/mark_user/useextraservice/)  
+[使用额外功能指南 →](https://beautify.gushao.club/docs/mark_user/useextraservice/)  
 
 1️⃣ **获取卡密密钥**  
 

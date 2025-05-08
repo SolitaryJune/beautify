@@ -11,7 +11,7 @@ images = ["Logo.png"]
 ogLocale = "zh_cn"
 ogImageHeight = "320"
 ogImageWidth = "640"
-domainTLD = "skin.gushao.club"
+domainTLD = "beautify.gushao.club"
 titleHome = "GuShao's Beautify Doc"
 
 ## Twitter Cards
@@ -34,7 +34,7 @@ schemaImageWidth = 289
 schemaImageHeight = 117
 schemaTwitter = ""
 schemaLinkedIn = ""
-schemaGitHub = "https://skin.gushao.club"
+schemaGitHub = "https://beautify.gushao.club"
 schemaSection = "blog"
 
 ## Sitelinks Search Box

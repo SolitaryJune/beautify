@@ -16,9 +16,9 @@ toc: true
 ## 文件上传方式指南
 
 > **请务必了解清楚上传流程！**  
-> 如果不清楚上传流程，请参阅 [阅览 | 上传格式 →](https://skin.gushao.club/docs/mark_user/uploadformat/)。
+> 如果不清楚上传流程，请参阅 [阅览 | 上传格式 →](https://beautify.gushao.club/docs/mark_user/uploadformat/)。
 > **请务必了解清楚适配预览流程！**  
-> 如果不清楚适配预览流程，请参阅 [适配预览 →](https://skin.gushao.club/docs/mark_user/adaptationpreview/)。
+> 如果不清楚适配预览流程，请参阅 [适配预览 →](https://beautify.gushao.club/docs/mark_user/adaptationpreview/)。
 
 ## 上传平台说明
 
@@ -33,7 +33,7 @@ toc: true
 **只有同步后才能使用该皮肤！**
 
 > **请务必了解清楚上传格式！**  
-> 如果不清楚上传格式，请参阅 [阅览 | 上传格式 →](https://skin.gushao.club/docs/mark_user/uploadformat/)。
+> 如果不清楚上传格式，请参阅 [阅览 | 上传格式 →](https://beautify.gushao.club/docs/mark_user/uploadformat/)。
 
 ---
 
@@ -53,7 +53,7 @@ toc: true
 ### 额外授权：
 
 请邀请 **孤傲** 和 **XiuXinBot** 进群，**孤傲** 将授权机器人权限。  
-更多信息请参阅：[二次鉴权 | 添加黑名单账号 →](https://skin.gushao.club/docs/mark_user/authentication/)。
+更多信息请参阅：[二次鉴权 | 添加黑名单账号 →](https://beautify.gushao.club/docs/mark_user/authentication/)。
 
 ---
 
@@ -73,7 +73,7 @@ toc: true
 ### 额外授权：
 
 请邀请 **孤傲** 和 **XiuXinBot** 进群，**孤傲** 将授权机器人权限。  
-更多信息请参阅：[二次鉴权 | 添加黑名单账号 →](https://skin.gushao.club/docs/mark_user/skinbatch/Authentication/)。
+更多信息请参阅：[二次鉴权 | 添加黑名单账号 →](https://beautify.gushao.club/docs/mark_user/skinbatch/Authentication/)。
 
 ---
 

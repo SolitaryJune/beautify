@@ -27,7 +27,7 @@ toc: true
 
 ## 在线打标
 
-欢迎使用 [在线上传文件打标](https://skin.gushao.club/docs/extra_service/skin/skinuploadhand/)。
+欢迎使用 [在线上传文件打标](https://beautify.gushao.club/docs/extra_service/skin/skinuploadhand/)。
 
 - **理论打标数量无限制**，测试显示一次可处理**100 个左右**，建议每次打**50 个**。
 - **超过 50 个**后可立即开启第二次任务，同时进行多次打标（第一批发送完毕后可直接开始第二批）。

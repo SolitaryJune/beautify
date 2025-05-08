@@ -15,7 +15,7 @@ weight: 830
 
 ### 皮肤加密Pro
 
-如果你想要加密性能更强，欢迎使用[皮肤加密Pro →](https://skin.gushao.club/docs/extra_service/skin/skinencryptpro/) 。
+如果你想要加密性能更强，欢迎使用[皮肤加密Pro →](https://beautify.gushao.club/docs/extra_service/skin/skinencryptpro/) 。
 
 ### Pro与Free功能对比一览
 
@@ -28,4 +28,4 @@ weight: 830
 
 点击跳转[皮肤加密Free →](https://skin-api-sq.gushao.club/en) 。
 
-授权[点击：](https://skin.gushao.club/docs/public_service/)。
+授权[点击：](https://beautify.gushao.club/docs/public_service/)。

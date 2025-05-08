@@ -76,6 +76,6 @@ weight: 830
 📩 **查询方法：** 在公众号聊天窗口发送 **“查黑名单XXX”**（XXX为您查询的用户名），系统将自动回复您的查询结果。  
 
 📷 **扫码查询：**  
-![扫码查询](http://skin.gushao.club/WXJuneOver24.png)  
+![扫码查询](http://beautify.gushao.club/WXJuneOver24.png)  
 
 ---
