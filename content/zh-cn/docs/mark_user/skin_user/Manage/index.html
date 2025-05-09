@@ -1,229 +1,176 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美化研究社区</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      .section {
+        background-color: #fff;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="file"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        margin: 2px 5px; /* 调整按钮外边距，减少水平间距 */
+        padding: 6px 12px; /* 稍微减小按钮内边距 */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #fff;
+        flex-shrink: 0; /* 防止按钮被压缩 */
+      }
+      .btn-verify {
+        background: #5cb85c;
+      }
+      .btn-upload {
+        background: #5bc0de;
+      }
+      .btn-show {
+        background: #f0ad4e;
+      }
+      .btn-gen {
+        background: #d9534f;
+      }
+      .btn-del {
+        background: #d9534f;
+        /* margin-left: 10px;  移除固定左边距，依赖flex布局和通用按钮边距 */
+      }
+      #result {
+        margin-top: 20px;
+        color: #333;
+      }
+      .file-list {
+        margin-top: 10px;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+      }
+      .file-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px; /* 增加项间距 */
+        flex-wrap: wrap; /* 允许换行 */
+      }
+      .avatar-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .avatar-small {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .file-name {
+        flex-grow: 1; /* 允许增长 */
+        flex-shrink: 1; /* 允许收缩 */
+        flex-basis: 60%; /* 基础宽度，给按钮留空间 */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-right: 10px;
+        min-width: 150px; /* 保证最小可见宽度 */
+      }
+      .progress-container {
+        margin-top: 15px;
+      }
+      .progress-bar-background {
+        width: 100%;
+        background-color: #e9e9e9;
+        height: 20px;
+        border-radius: 6px;
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+      .progress-bar {
+        background-color: #5bc0de;
+        height: 100%;
+        width: 0%;
+      }
+      .file-result {
+        margin-top: 10px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+      .file-result .error {
+        color: red;
+        font-weight: bold;
+      }
+      .file-result .merged-files {
+        color: green;
+        font-weight: bold;
+      }
+      .file-result .warning {
+        color: #ff9800;
+        font-weight: bold;
+      }
+      .file-info {
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 5px;
+      }
+      .file-result button {
+        margin-top: 5px;
+        margin-left: 0;
+        font-size: 0.85rem;
+        padding: 3px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>美化研究社区</h1>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>美化研究社区</title>
-  <script src="https://beautify.gushao.club/utils/useragent-check.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      margin: 0;
-      padding: 20px;
-    }
+    <div class="section">
+      <label for="secret_key">上传密钥：</label>
+      <input type="text" id="secret_key" placeholder="请输入密钥" required />
 
-    h1 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+      <!-- 验证密钥按钮 -->
+      <button class="btn-verify" id="verifyKeyBtn">验证密钥</button>
+    </div>
 
-    .section {
-      background-color: #fff;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 600px;
-      border-radius: 6px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+    <!-- 上传功能区域：初始隐藏 -->
+    <div class="section" id="uploadSection" style="display: none">
+      <label for="files">选择文件（可多选）：</label>
+      <input type="file" id="files" multiple required />
+      <button class="btn-upload" id="startUpload">开始上传</button>
+    </div>
 
-    label {
-      display: block;
-      margin: 10px 0 5px;
-      font-weight: bold;
-    }
+    <div id="result" class="section" style="display: none"></div>
 
-    input[type="text"],
-    input[type="file"] {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      margin: 2px 5px;
-      /* 调整按钮外边距，减少水平间距 */
-      padding: 6px 12px;
-      /* 稍微减小按钮内边距 */
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      color: #fff;
-      flex-shrink: 0;
-      /* 防止按钮被压缩 */
-    }
-
-    .btn-verify {
-      background: #5cb85c;
-    }
-
-    .btn-upload {
-      background: #5bc0de;
-    }
-
-    .btn-show {
-      background: #f0ad4e;
-    }
-
-    .btn-gen {
-      background: #d9534f;
-    }
-
-    .btn-del {
-      background: #d9534f;
-      /* margin-left: 10px;  移除固定左边距，依赖flex布局和通用按钮边距 */
-    }
-
-    #result {
-      margin-top: 20px;
-      color: #333;
-    }
-
-    .file-list {
-      margin-top: 10px;
-      border-top: 1px solid #ccc;
-      padding-top: 10px;
-    }
-
-    .file-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      /* 增加项间距 */
-      flex-wrap: wrap;
-      /* 允许换行 */
-    }
-
-    .avatar-container {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-
-    .avatar-small {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-
-    .file-name {
-      flex-grow: 1;
-      /* 允许增长 */
-      flex-shrink: 1;
-      /* 允许收缩 */
-      flex-basis: 60%;
-      /* 基础宽度，给按钮留空间 */
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      margin-right: 10px;
-      min-width: 150px;
-      /* 保证最小可见宽度 */
-    }
-
-    .progress-container {
-      margin-top: 15px;
-    }
-
-    .progress-bar-background {
-      width: 100%;
-      background-color: #e9e9e9;
-      height: 20px;
-      border-radius: 6px;
-      overflow: hidden;
-      margin-bottom: 10px;
-    }
-
-    .progress-bar {
-      background-color: #5bc0de;
-      height: 100%;
-      width: 0%;
-    }
-
-    .file-result {
-      margin-top: 10px;
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-
-    .file-result .error {
-      color: red;
-      font-weight: bold;
-    }
-
-    .file-result .merged-files {
-      color: green;
-      font-weight: bold;
-    }
-
-    .file-result .warning {
-      color: #ff9800;
-      font-weight: bold;
-    }
-
-    .file-info {
-      font-size: 0.85rem;
-      color: #666;
-      margin-bottom: 5px;
-    }
-
-    .file-result button {
-      margin-top: 5px;
-      margin-left: 0;
-      font-size: 0.85rem;
-      padding: 3px 8px;
-    }
-
-    footer {
-      margin-top: 20px;
-      text-align: center;
-      color: #777;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-
-<body>
-  <h1>美化研究社区</h1>
-
-  <div class="section">
-    <label for="secret_key">上传密钥：</label>
-    <input type="text" id="secret_key" placeholder="请输入密钥" required />
-
-    <!-- 验证密钥按钮 -->
-    <button class="btn-verify" id="verifyKeyBtn">验证密钥</button>
-  </div>
-
-  <!-- 上传功能区域：初始隐藏 -->
-  <div class="section" id="uploadSection" style="display: none">
-    <label for="files">选择文件（可多选）：</label>
-    <input type="file" id="files" multiple required />
-    <button class="btn-upload" id="startUpload">开始上传</button>
-  </div>
-
-  <div id="result" class="section" style="display: none"></div>
-
-  <!-- 文件管理区域（查看、生成卡密、删除等）：初始隐藏 -->
-  <div class="section" id="manageSection" style="display: none">
-    <button class="btn-show" id="showFilesBtn">显示文件列表</button>
-    <button class="btn-gen" style="background: #17a2b8;" onclick="uploadAndTag()">上传文件打标</button> <!-- 移动到这里 -->
-    <div class="file-list" id="fileList"></div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- 文件管理区域（查看、生成卡密、删除等）：初始隐藏 -->
+    <div class="section" id="manageSection" style="display: none">
+      <button class="btn-show" id="showFilesBtn">显示文件列表</button>
+      <button class="btn-gen" style="background: #17a2b8;" onclick="uploadAndTag()">上传文件打标</button> <!-- 移动到这里 -->
+      <div class="file-list" id="fileList"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- <footer>
     &copy; <span id="currentYear">2025</span> GuShao's Beautify Service | 由 <a
       href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=3567055800">孤傲</a> 强力驱动
