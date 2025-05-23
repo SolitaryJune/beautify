@@ -15,7 +15,7 @@ weight: 830
 
 ### 音效转换 定价45r永久（支持所有设备）
 
-如果你想要更多自定义，欢迎使用[图片水印Pro →](https://beautify.gushao.club/docs/extra_service/skin/SkinWaterPro/)。
+如果你想要更多自定义，欢迎使用[音效转换 →](https://beautify.gushao.club/docs/extra_service/soud/SoudCover/)。
 
 ---
 

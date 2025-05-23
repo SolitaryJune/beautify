@@ -52,6 +52,52 @@ toc: true
 
 ---
 
+## 功能合集
+
+查看全部公益服务：  
+[公益服务 →]({{% relref "public_service" %}})
+
+### 字体服务
+
+- [字体转换 →]({{% relref "https://beautify.gushao.club/docs/extra_service/font/FontCover/" %}})
+- [字体转换教程 →]({{% relref "../extra_service/font/FontCover.md" %}})
+- [在线上传字体打标 →]({{% relref "https://beautify.gushao.club/docs/extra_service/font/UploadHandWeb" %}})
+- [在线上传字体打标教程 →]({{% relref "../extra_service/font/UploadHand.md" %}})
+- [推荐字体功能 | 获得分成教程 →]({{% relref "../extra_service/font/Divide.md" %}})
+
+### 音效服务
+
+- [音效转换 →]({{% relref "https://beautify.gushao.club/docs/extra_service/soud/SoudCover/" %}})
+- [音效转换教程 →]({{% relref "../extra_service/sound/SoudCover.md" %}})
+- [在线上传音效打标 →]({{% relref "https://beautify.gushao.club/docs/extra_service/soud/UploadHandWeb" %}})
+- [在线上传音效打标教程 →]({{% relref "../extra_service/sound/UploadHand.md" %}})
+- [推荐音效功能 | 获得分成教程 →]({{% relref "../extra_service/sound/Divide.md" %}})
+
+### 皮肤服务
+
+- [一键署名Pro →]({{% relref "https://beautify.gushao.club/docs/extra_service/skin/OneClickSignaturePro/" %}})
+- [一键署名Pro教程 →]({{% relref "../extra_service/skin/OneClickSignaturePro.md" %}})
+- [一键改色 →]({{% relref "https://beautify.gushao.club/docs/extra_service/skin/PicColorChange/" %}})
+- [一键改色教程 →]({{% relref "../extra_service/skin/PicColorChange.md" %}})
+- [图命灵变Pro →]({{% relref "https://beautify.gushao.club/docs/extra_service/skin/PicMagicPro/" %}})
+- [图命灵变Pro教程 →]({{% relref "../extra_service/skin/PicMagicPro.md" %}})
+- [素材分割Pro →]({{% relref "https://beautify.gushao.club/docs/extra_service/skin/PicPartPro/" %}})
+- [素材分割Pro教程 →]({{% relref "../extra_service/skin/PicPartPro.md" %}})
+- [一键转系统Pro →]({{% relref "https://beautify.gushao.club/docs/extra_service/skin/SkinConversionPro/" %}})
+- [一键转系统Pro教程 →]({{% relref "../extra_service/skin/SkinConversionPro.md" %}})
+- [皮肤加密Pro →]({{% relref "https://beautify.gushao.club/docs/extra_service/skin/SkinEncryptPro" %}})
+- [皮肤加密Pro教程 →]({{% relref "../extra_service/skin/SkinEncryptPro.md" %}})
+- [打前景Pro →]({{% relref "https://beautify.gushao.club/docs/extra_service/skin/SkinForwardPro/" %}})
+- [打前景Pro教程 →]({{% relref "../extra_service/skin/SkinForward.md" %}})
+- [一键换Logo/底包切片合成/批量重命名/wx批量换素材 →]({{% relref "https://beautify.gushao.club/docs/extra_service/skin/SkinLogo" %}})
+- [一键换Logo/底包切片合成/批量重命名/wx批量换素材教程 →]({{% relref "../extra_service/skin/SkinLogo.md" %}})
+- [在线上传文件打标 →]({{% relref "https://beautify.gushao.club/docs/extra_service/skin/UploadHandWeb" %}})
+- [在线上传文件打标教程 →]({{% relref "../extra_service/skin/SkinUploadHand.md" %}})
+- [图片水印Pro →]({{% relref "https://beautify.gushao.club/docs/extra_service/skin/SkinWaterPro/" %}})
+- [图片水印Pro教程 →]({{% relref "../extra_service/skin/SkinWaterPro.md" %}})
+
+---
+
 ## 关于我们
 
 这里凝聚起每个人的创造力，大家秉承着共同的价值观，一起为成就伟大事业而努力。  
