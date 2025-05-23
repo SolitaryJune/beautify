@@ -24,7 +24,7 @@ url = "/docs/extra_service/"
 
 [[docs]]
 name = "公益功能|加密/转系统等"
-weight = 30
+weight = 40
 identifier = "public_service"
 url = "/docs/public_service/"
 
