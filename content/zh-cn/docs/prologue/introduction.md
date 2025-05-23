@@ -36,26 +36,8 @@ toc: true
 
 ## 额外服务
 
-皮肤生成卡密（上架阿奇索等）｜ 在线打标 ｜ 一键换 Logo / 切片 / 批量重命名 / wx 批量换素材 ｜ 自动打前景 Pro ｜ 加密 Pro ｜ 转系统 Pro ｜ 图片水印 Pro ｜ 素材分割 Pro ｜ 图命灵变 Pro ｜ 一键改色 | 一键署名Pro
-
 查看全部额外服务：  
 [额外服务 →]({{% relref "extra_service" %}})
-
----
-
-## 公益服务
-
-图片尺寸检测工具 (Logo) ｜ 图片水印 ｜ 打前景 Free ｜ 皮肤加密 Free（授权） ｜ 素材分割 Free ｜ 自助授权 ｜ （破|去标）强度测试工具（打标机通用）
-
-查看全部公益服务：  
-[公益服务 →]({{% relref "public_service" %}})
-
----
-
-## 功能合集
-
-查看全部公益服务：  
-[公益服务 →]({{% relref "public_service" %}})
 
 ### 字体服务
 
@@ -95,6 +77,15 @@ toc: true
 - [在线上传文件打标教程 →]({{% relref "../extra_service/skin/SkinUploadHand.md" %}})
 - [图片水印Pro →]({{% relref "https://beautify.gushao.club/docs/extra_service/skin/SkinWaterPro/" %}})
 - [图片水印Pro教程 →]({{% relref "../extra_service/skin/SkinWaterPro.md" %}})
+
+---
+
+## 公益服务
+
+图片尺寸检测工具 (Logo) ｜ 图片水印 ｜ 打前景 Free ｜ 皮肤加密 Free（授权） ｜ 素材分割 Free ｜ 自助授权 ｜ （破|去标）强度测试工具（打标机通用）
+
+查看全部公益服务：  
+[公益服务 →]({{% relref "public_service" %}})
 
 ---
 
