@@ -20,14 +20,16 @@ toc: true
 
 - **网页打标**支持批量上传文件，操作简单直观
 - **注意**：已购打标机器人版本再次购入将同时拥有**在线**和**QQ 手动打标**功能  
-  - **单邮箱批量打标**超过 5 个时，自动切换为 **fast 模式**（安全性较差）  
-  - **多邮箱一对一推送**不受影响
+  - **在线上传文件打标**的**单邮箱批量打标**超过 5 个时，自动切换为 **fast 模式**（安全性较差）  
+  - **多邮箱一对一推送**和**管理系统打标**不受影响
 
 ---
 
 ## 网页打标操作指南
 
-访问 [在线上传文件打标](https://beautify.gushao.club/docs/mark_user/skin_user/Manage/) 页面，按照以下步骤操作：
+访问 [管理系统打标](https://beautify.gushao.club/docs/mark_user/skin_user/Manage/) 页面，按照以下步骤操作：
+
+访问 [在线上传文件打标](https://beautify.gushao.club/docs/extra_service/skin/UploadHandWeb) 页面，按照以下步骤操作：
 
 ### 1. 验证密钥
 
