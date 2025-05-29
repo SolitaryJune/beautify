@@ -21,7 +21,7 @@ weight: 830
 #### 快速入口  
 
 - 新通道：[转系统Pro](https://beautify.gushao.club/docs/extra_service/skin/SkinConversionPro/)  
-- 旧通道：[转系统Pro Old](https://beautify.gushao.club/docs/extra_service/skin/SkinConversionProOld)   
+- 旧通道：[转系统Pro Old](https://beautify.gushao.club/docs/extra_service/skin/SkinConversionProOld)
 
 ---
 
