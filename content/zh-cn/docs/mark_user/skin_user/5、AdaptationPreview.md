@@ -1,5 +1,5 @@
 ---
-title: "三、适配预览 皮肤 | 图标等文件"
+title: "五、适配预览 皮肤 | 图标等文件"
 description: "作者 ｜ 孤傲"
 lead: "作者 ｜ 孤傲"
 date: 2021-08-19T08:49:31+00:00
@@ -9,7 +9,7 @@ images: []
 menu:
   docs:
     parent: "skin_user"
-    weight: 30
+    weight: 50
 toc: true
 ---
 

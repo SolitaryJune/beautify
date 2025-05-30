@@ -34,16 +34,16 @@ toc: true
 
 ### 皮肤作者版教程
 
+- [一、两次鉴权 →]({{% relref "../mark_user/skin_user/Authentication.md" %}})
+- [二、文件上传方式 →]({{% relref "../mark_user/skin_user/Upland.md" %}})
+- [三、了解 兑换|使用 打标文件 →]({{% relref "../mark_user/skin_user/ExchangeSkin.md" %}})
 - [适配预览 皮肤 | 图标等文件教程 →]({{% relref "../mark_user/skin_user/AdaptationPreview.md" %}})
 - [添加黑名单账号教程 →]({{% relref "../mark_user/skin_user/AddBlacklistAccount.md" %}})
-- [两次鉴权 | 添加黑名单账号教程 →]({{% relref "../mark_user/skin_user/Authentication.md" %}})
 - [推荐打标机 皮肤|图片素材 | 获得分成教程 →]({{% relref "../mark_user/skin_user/Divide.md" %}})
-- [了解 兑换|使用皮肤教程 →]({{% relref "../mark_user/skin_user/ExchangeSkin.md" %}})
 - [手动打标教程 →]({{% relref "../mark_user/skin_user/MarkByHand.md" %}})
 - [了解 搜索|查找 皮肤|图标等文件教程 →]({{% relref "../mark_user/skin_user/SearchSkin.md" %}})
 - [生成卡密（上架阿奇索等）教程 →]({{% relref "../mark_user/skin_user/SkinCard.md" %}})
 - [查询标记教程 →]({{% relref "../mark_user/skin_user/SkinCheck.md" %}})
-- [文件上传方式教程 →]({{% relref "../mark_user/skin_user/Upland.md" %}})
 - [阅览 | 上传格式教程 →]({{% relref "../mark_user/skin_user/UploadFormat.md" %}})
 - [使用额外功能指南教程 →]({{% relref "../mark_user/skin_user/UseExtraservice.md" %}})
 

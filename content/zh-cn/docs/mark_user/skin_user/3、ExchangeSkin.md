@@ -1,5 +1,5 @@
 ---
-title: "五、了解 兑换|使用皮肤"
+title: "三、了解 兑换|使用 打标文件"
 description: "作者 ｜ 孤傲"
 lead: "作者 ｜ 孤傲"
 date: 2021-08-19T08:49:31+00:00
@@ -9,7 +9,7 @@ images: []
 menu:
   docs:
     parent: "skin_user"
-    weight: 50
+    weight: 30
 toc: true
 ---
 
