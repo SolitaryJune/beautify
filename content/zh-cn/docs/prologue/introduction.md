@@ -34,18 +34,18 @@ toc: true
 
 ### 皮肤作者版教程
 
-- [一、首次使用？ 请进行两次鉴权 →]({{% relref "../mark_user/skin_user/1、Authentication.md" %}})
-- [二、鉴权完成，如何将文件上传至打标系统？ →]({{% relref "../mark_user/skin_user/2、Upland.md" %}})
-- [三、如何 兑换|使用 打标文件 →]({{% relref "../mark_user/skin_user/3、ExchangeSkin.md" %}})
-- [四、如何 搜索|查找 皮肤|图标等文件 ？ →]({{% relref "../mark_user/skin_user/4、SearchSkin.md" %}})
-- [适配预览 皮肤 | 图标等文件教程 →]({{% relref "../mark_user/skin_user/AdaptationPreview.md" %}})
-- [添加黑名单账号教程 →]({{% relref "../mark_user/skin_user/AddBlacklistAccount.md" %}})
-- [推荐打标机 皮肤|图片素材 | 获得分成教程 →]({{% relref "../mark_user/skin_user/Divide.md" %}})
-- [手动打标教程 →]({{% relref "../mark_user/skin_user/MarkByHand.md" %}})
-- [生成卡密（上架阿奇索等）教程 →]({{% relref "../mark_user/skin_user/SkinCard.md" %}})
-- [查询标记教程 →]({{% relref "../mark_user/skin_user/SkinCheck.md" %}})
-- [阅览 | 上传格式教程 →]({{% relref "../mark_user/skin_user/UploadFormat.md" %}})
-- [使用额外功能指南教程 →]({{% relref "../mark_user/skin_user/UseExtraservice.md" %}})
+- 1. [首次使用：进行两次鉴权]({{% relref "../mark_user/skin_user/1、Authentication.md" %}})
+- 2. [鉴权完成：上传文件至打标系统]({{% relref "../mark_user/skin_user/2、Upland.md" %}})
+- 3. [兑换与使用打标文件]({{% relref "../mark_user/skin_user/3、ExchangeSkin.md" %}})
+- 4. [搜索与查找皮肤、图标等文件]({{% relref "../mark_user/skin_user/4、SearchSkin.md" %}})
+- 5. [适配预览皮肤与图标文件]({{% relref "../mark_user/skin_user/AdaptationPreview.md" %}})
+- 6. [添加黑名单账号]({{% relref "../mark_user/skin_user/AddBlacklistAccount.md" %}})
+- 7. [推荐素材与获取分成]({{% relref "../mark_user/skin_user/Divide.md" %}})
+- 8. [手动打标指南]({{% relref "../mark_user/skin_user/MarkByHand.md" %}})
+- 9. [生成卡密与上架]({{% relref "../mark_user/skin_user/SkinCard.md" %}})
+- 10. [查询标记状态]({{% relref "../mark_user/skin_user/SkinCheck.md" %}})
+- 11. [查看与上传格式要求]({{% relref "../mark_user/skin_user/UploadFormat.md" %}})
+- 12. [使用额外功能指南]({{% relref "../mark_user/skin_user/UseExtraservice.md" %}})
 
 ---
 
