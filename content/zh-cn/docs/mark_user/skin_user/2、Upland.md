@@ -1,5 +1,5 @@
 ---
-title: "四、文件上传方式"
+title: "二、鉴权完成，如何将文件上传至打标系统？"
 description: "作者 ｜ 孤傲"
 lead: "作者 ｜ 孤傲"
 date: 2021-08-19T08:49:31+00:00
@@ -9,16 +9,30 @@ images: []
 menu:
   docs:
     parent: "skin_user"
-    weight: 40
+    weight: 20
 toc: true
 ---
 
-## 文件上传方式指南
+### 请确保您已经额外授权：
 
-> **请务必了解清楚上传流程！**  
-> 如果不清楚上传流程，请参阅 [阅览 | 上传格式 →](https://beautify.gushao.club/docs/mark_user/uploadformat/)。
-> **请务必了解清楚适配预览流程！**  
-> 如果不清楚适配预览流程，请参阅 [适配预览 →](https://beautify.gushao.club/docs/mark_user/adaptationpreview/)。
+请邀请 **孤傲** 和 **XiuXinBot** 进群，**孤傲** 将授权机器人权限。  
+更多信息请参阅：[二次鉴权  →](https://beautify.gushao.club/docs/mark_user/skin_user/authentication/)。
+
+## 上传格式
+
+### 百度 | 讯飞等作者
+
+支持上传以下格式的单文件（支持批量上传）：
+
+- **bdi** | **bds** | **it**
+
+---
+
+### 图标 | 图片等作者
+
+支持上传格式：
+
+- **zip**
 
 ## 上传平台说明
 
@@ -27,10 +41,6 @@ toc: true
 
 - **在QQ群中发起上传后，请私聊 Bot 使用**
 - **在 WX 群里可直接使用上传功能**
-
-**上传完成后，请耐心等待邮箱 ID 分配。**  
-**ID 格式：你的 QQ / 群路径**  
-**只有同步后才能使用该皮肤！**
 
 > **请务必了解清楚上传格式！**  
 > 如果不清楚上传格式，请参阅 [阅览 | 上传格式 →](https://beautify.gushao.club/docs/mark_user/uploadformat/)。
@@ -47,13 +57,8 @@ toc: true
 1. 在你的群里发送 **“加密上传”**
 2. 私聊机器人 **“QQ号”**
 3. 获取上传密钥
-4. 访问网址上传皮肤
-5. 等待 ID 推送
-
-### 额外授权：
-
-请邀请 **孤傲** 和 **XiuXinBot** 进群，**孤傲** 将授权机器人权限。  
-更多信息请参阅：[二次鉴权 | 添加黑名单账号 →](https://beautify.gushao.club/docs/mark_user/authentication/)。
+4. 访问 **“群公告”** 的 **“管理系统网址”** 上传皮肤
+5. 开始使用
 
 ---
 
@@ -65,15 +70,10 @@ toc: true
 > 需要在你的群里发起上传，标准流程如下：
 
 1. 在你的群里发送 **“加密上传”**
-2. 在群内发送 **“QQ号”**
+2. 私聊机器人 **“QQ号”**
 3. 获取上传密钥
-4. 访问网址上传皮肤
-5. 等待 ID 推送
-
-### 额外授权：
-
-请邀请 **孤傲** 和 **XiuXinBot** 进群，**孤傲** 将授权机器人权限。  
-更多信息请参阅：[二次鉴权 | 添加黑名单账号 →](https://beautify.gushao.club/docs/mark_user/skinbatch/Authentication/)。
+4. 访问 **“群公告”** 的 **“管理系统网址”** 上传皮肤
+5. 开始使用
 
 ---
 
@@ -89,4 +89,4 @@ toc: true
 - **在QQ群中发起上传后，请私聊 Bot 使用**
 - **在WX群中可直接使用上传功能**
 
-上传完成后，请耐心等待邮箱 ID 分配。
+上传完成后，即可开始使用。
