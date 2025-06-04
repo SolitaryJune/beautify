@@ -57,4 +57,4 @@ toc: true
 
 ## 🏪 上架到阿奇索
 
-![上架到阿奇索](https://beautify.gushao.club/docs/mark_user/SkinCard/image.png)
+![上架到阿奇索](https://beautify.gushao.club/docs/mark_user/skin_user/SkinCard/image.png)
