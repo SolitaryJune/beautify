@@ -19,7 +19,9 @@ weight: 830
 
 > 已购买打标机用户无需购买该功能，获取密钥（卡密）请前往 [使用额外功能 →](https://beautify.gushao.club/docs/mark_user/useextraservice/)  
 
-欢迎使用 [素材分割Pro →](https://beautify.gushao.club/docs/extra_service/skin/PicPartPro/)  
+欢迎使用 [素材分割Pro 新（设备性能要求较高，切割更丰富，识别更强） →](https://beautify.gushao.club/docs/extra_service/skin/PicPartPro/) 
+
+欢迎使用 [素材分割Pro 旧 →](https://beautify.gushao.club/docs/extra_service/skin/PicPartProOld/) 
 
 ---
 
