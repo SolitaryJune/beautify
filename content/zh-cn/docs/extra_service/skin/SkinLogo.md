@@ -16,7 +16,7 @@ weight: 830
 ### 重要说明
 
 **注：** 此功能定价 **15 元永久**，支持所有设备。  
-已购买打标机用户无需购买，获取密钥请访问 → [使用额外功能](https://beautify.gushao.club/docs/mark_user/useextraservice/)。
+已购买打标机用户无需购买，获取密钥请访问 → [使用额外功能](https://beautify.gushao.club/docs/mark_user/skin_user/useextraservice/)。
 
 ---
 
