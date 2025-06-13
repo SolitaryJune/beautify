@@ -72,6 +72,13 @@
   {{ if .Site.Params.options.flexSearch -}}
     <script src="{{ $index.RelPermalink }}" defer></script>
   {{ end -}}
+
+  {{ $userAgentCheck := resources.Get "js/useragent-check.js" -}}
+  {{ if $userAgentCheck -}}
+    <script src="{{ $userAgentCheck.RelPermalink }}" defer></script>
+  {{ else -}}
+    {{ warnf "useragent-check.js not found in assets/js/" -}}
+  {{ end -}}
 {{ else -}}
   {{ $js := $js | minify | fingerprint "sha512" -}}
   {{ $index := $index | minify | fingerprint "sha512" -}}
@@ -96,5 +103,13 @@
   {{ end -}}
   {{ if .Site.Params.options.flexSearch -}}
     <script src="{{ $index.RelPermalink }}"  defer></script>
+  {{ end -}}
+
+  {{ $userAgentCheck := resources.Get "js/useragent-check.js" -}}
+  {{ if $userAgentCheck -}}
+    {{ $userAgentCheckProcessed := $userAgentCheck | minify | fingerprint "sha512" -}}
+    <script src="{{ $userAgentCheckProcessed.RelPermalink }}" defer></script>
+  {{ else -}}
+    {{ warnf "useragent-check.js not found in assets/js/" -}}
   {{ end -}}
 {{ end -}}
