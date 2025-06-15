@@ -27,9 +27,9 @@ toc: true
 
 ## 网页打标操作指南
 
-访问 [管理系统打标](https://beautify.gushao.club/docs/mark_user/skin_user/Manage/) 页面，按照以下步骤操作：
+访问 [管理系统打标](/docs/mark_user/skin_user/Manage/) 页面，按照以下步骤操作：
 
-访问 [在线上传文件打标](https://beautify.gushao.club/docs/extra_service/skin/UploadHandWeb) 页面，按照以下步骤操作：
+访问 [在线上传文件打标](/docs/extra_service/skin/UploadHandWeb) 页面，按照以下步骤操作：
 
 ### 1. 验证密钥
 

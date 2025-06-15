@@ -16,10 +16,10 @@ weight: 830
 ### 一键署名Pro（此功能定价15元永久，支持所有设备）
 
 **已购买打标机用户无需购买该功能，获取密钥（卡密）请前往**  
-[使用额外功能 →](https://beautify.gushao.club/docs/mark_user/skin_user/useextraservice/)
+[使用额外功能 →](/docs/mark_user/skin_user/useextraservice/)
 
 **功能入口**  
-[一键署名Pro →](https://beautify.gushao.club/docs/extra_service/skin/OneClickSignaturePro/)
+[一键署名Pro →](/docs/extra_service/skin/OneClickSignaturePro/)
 
 ---
 

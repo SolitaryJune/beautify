@@ -17,7 +17,7 @@ toc: true
 
 **注：卡密在网站兑换！兑换时仅标记卡密所含内容，卡密可二次获取。**
 
-👉 **兑换网址：** [点击跳转](https://beautify.gushao.club/docs/mark_use/Redeem/)
+👉 **兑换网址：** [点击跳转](/docs/mark_use/Redeem/)
 
 ---
 
@@ -26,7 +26,7 @@ toc: true
 ### 📤 上传方式
 
 上传方式：**皮肤管理系统**  
-🔗 [点击跳转 →](https://beautify.gushao.club/docs/mark_user/upland/#%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8A%E4%BC%A0)
+🔗 [点击跳转 →](/docs/mark_user/upland/#%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%8A%E4%BC%A0)
 
 ### 🔑 皮肤管理系统
 
@@ -37,7 +37,7 @@ toc: true
 3. **文件管理**：查看已上传的文件列表
 4. **上传文件打标**：为上传的文件生成卡密
 
-🔗 [皮肤管理系统](https://beautify.gushao.club/docs/mark_user/skin_user/Manage/)
+🔗 [皮肤管理系统](/docs/mark_user/skin_user/Manage/)
 
 ### 🔄 标准上传流程
 
@@ -57,4 +57,4 @@ toc: true
 
 ## 🏪 上架到阿奇索
 
-![上架到阿奇索](https://beautify.gushao.club/docs/mark_user/skin_user/SkinCard/image.png)
+![上架到阿奇索](/docs/mark_user/skin_user/SkinCard/image.png)

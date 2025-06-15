@@ -16,7 +16,7 @@ toc: true
 ### 请确保您已经额外授权：
 
 请邀请 **孤傲** 和 **XiuXinBot** 进群，**孤傲** 将授权机器人权限。  
-更多信息请参阅：[二次鉴权  →](https://beautify.gushao.club/docs/mark_user/skin_user/authentication/)。
+更多信息请参阅：[二次鉴权  →](/docs/mark_user/skin_user/authentication/)。
 
 ## 上传格式
 
@@ -43,7 +43,7 @@ toc: true
 - **在 WX 群里可直接使用上传功能**
 
 > **请务必了解清楚上传格式！**  
-> 如果不清楚上传格式，请参阅 [阅览 | 上传格式 →](https://beautify.gushao.club/docs/mark_user/uploadformat/)。
+> 如果不清楚上传格式，请参阅 [阅览 | 上传格式 →](/docs/mark_user/uploadformat/)。
 
 ---
 

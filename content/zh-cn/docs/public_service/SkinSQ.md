@@ -21,7 +21,7 @@ weight: 830
 
 首先向公众号 **JuneOver24** 发送 **卡密登录**
 
-![获取卡密](https://beautify.gushao.club/docs/public_service/SkinSQ/image.png)
+![获取卡密](/docs/public_service/SkinSQ/image.png)
 
 如 **NGcyMjg0LGR1NjB4NkYZb045ElV1eSlQNm02HEp6eWQXA2UfGkIfN3hPDJ==** 就是你的卡密
 

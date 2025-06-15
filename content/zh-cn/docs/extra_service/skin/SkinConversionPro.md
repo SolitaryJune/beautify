@@ -16,12 +16,12 @@ weight: 830
 ### 一键转系统Pro  
 
 **注：此功能为加密Pro专属，购买加密Pro后自动激活！**  
-已购买打标机用户无需额外购买，获取密钥（卡密）请前往 [使用额外功能](https://beautify.gushao.club/docs/mark_user/skin_user/useextraservice/)。
+已购买打标机用户无需额外购买，获取密钥（卡密）请前往 [使用额外功能](/docs/mark_user/skin_user/useextraservice/)。
 
 #### 快速入口  
 
-- 新通道：[转系统Pro](https://beautify.gushao.club/docs/extra_service/skin/SkinConversionPro/)  
-- 旧通道：[转系统Pro Old](https://beautify.gushao.club/docs/extra_service/skin/SkinConversionProOld)
+- 新通道：[转系统Pro](/docs/extra_service/skin/SkinConversionPro/)  
+- 旧通道：[转系统Pro Old](/docs/extra_service/skin/SkinConversionProOld)
 
 ---
 

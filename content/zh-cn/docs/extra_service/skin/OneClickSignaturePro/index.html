@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>一键署名Pro</title>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://beautify.gushao.club/utils/av-min.js"></script>
+  <script src="/utils/av-min.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9848692070506076"
       crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
@@ -333,9 +333,9 @@
       <h2><i class="fas fa-qrcode"></i> 公益查询服务</h2>
       <p>微信扫码发送"查黑名单xxx"<br>支持 QQ | 微信 | 小红书 | 微博</p>
       <img
-        src="https://beautify.gushao.club/utils/WXJuneOver24.png"
+        src="/utils/WXJuneOver24.png"
         style="width: 200px; height: auto;" alt="QR Code">
-      <p>【提交二传】黑名单申请：<a href="https://beautify.gushao.club/docs/public_service/blacklistreview/" target="_blank">点击申请</a></p>
+      <p>【提交二传】黑名单申请：<a href="/docs/public_service/blacklistreview/" target="_blank">点击申请</a></p>
     </div>
 
     <footer>
@@ -347,7 +347,7 @@
     <script>
       // 检查来源，如果不是来自 beautify.gushao.club 则重定向
       // if (!document.referrer.includes('beautify.gushao.club')) {
-      //   window.location.href = 'https://beautify.gushao.club';
+      //   window.location.href = '';
       // }
 
       // 设置当前年份
@@ -510,7 +510,7 @@
               timer: 5000,
               timerProgressBar: true
             }).then(() => {
-              window.location.href = 'https://beautify.gushao.club/'; // 刷新到指定页面
+              window.location.href = '/'; // 刷新到指定页面
             });
             return false; // 已过期
           } else {

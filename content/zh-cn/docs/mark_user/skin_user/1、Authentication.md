@@ -29,6 +29,6 @@ toc: true
 ## 第二次鉴权
 
 1. 在 **孤傲** 的会员群中，私聊 **Bot** 并发送关键词 **添加授权**，获取密钥。
-2. 前往鉴权网址：[两次鉴权 →](https://beautify.gushao.club/docs/mark_user/skin_user/Authentication/)
+2. 前往鉴权网址：[两次鉴权 →](/docs/mark_user/skin_user/Authentication/)
 
 ✅ **第二次鉴权完成**

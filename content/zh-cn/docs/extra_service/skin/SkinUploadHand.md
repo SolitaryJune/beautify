@@ -15,7 +15,7 @@ weight: 830
 
 ## 功能简介
 
-- 欢迎使用官方通道：[在线上传文件打标 →](https://beautify.gushao.club/docs/extra_service/skin/UploadHandWeb)
+- 欢迎使用官方通道：[在线上传文件打标 →](/docs/extra_service/skin/UploadHandWeb)
 - 欢迎使用备用通道：[在线上传文件打标 Mirror →](http://beautify.gushao.club/docs/extra_service/skin/UploadHandWebMirror/)
 - 此功能支持皮肤（自动加密）、图片素材等文件的在线打标，并提供单邮箱批量打标和多邮箱一对一推送服务。
 

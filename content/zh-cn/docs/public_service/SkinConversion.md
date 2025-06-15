@@ -15,10 +15,10 @@ weight: 830
 
 ### 一键转系统
 
-注意，该功能因为一直遭受攻击已经下架，请使用[转系统Pro →](https://beautify.gushao.club/docs/extra_service/skin/skinconversionpro/) 。
+注意，该功能因为一直遭受攻击已经下架，请使用[转系统Pro →](/docs/extra_service/skin/skinconversionpro/) 。
 
 ### 注意，该功能因为一直遭受攻击已经下架
 
 点击跳转[一键转系统）](https://skin-api-en.gushao.club/co) 。
 
-授权[点击：](https://beautify.gushao.club/docs/public_service/)。
+授权[点击：](/docs/public_service/)。

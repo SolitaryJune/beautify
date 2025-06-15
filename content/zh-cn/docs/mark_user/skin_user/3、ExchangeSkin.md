@@ -19,7 +19,7 @@ toc: true
 
 获取的皮肤将记录下你的个人信息，请勿未经作者许可进行二次传播、修改或以任何形式重新发布作者的皮肤作品。希望大家能够尊重原创，维护创作环境，共同营造一个良好的创作社区。
 
-[**上黑流程 点击跳转 →**](https://beautify.gushao.club/docs/mark_user/skin_user/UploaderBlacklist/)
+[**上黑流程 点击跳转 →**](/docs/mark_user/skin_user/UploaderBlacklist/)
 
 ---
 
@@ -107,7 +107,7 @@ toc: true
 
 ### 兑换网址：
 
-[**点击跳转 →**](https://beautify.gushao.club/docs/mark_use/Redeem/)
+[**点击跳转 →**](/docs/mark_use/Redeem/)
 
 ### 获取流程：
 
