@@ -22,7 +22,7 @@ weight: 830
 
 ### 功能入口
 
-立即使用 → [一键换Logo/底包切片合成/批量重命名/wx批量换素材](https://beautify.gushao.club/docs/extra_service/skin/SkinLogo)
+立即使用 → [一键换Logo/底包切片合成/批量重命名/wx批量换素材](/docs/extra_service/skin/SkinLogo)
 
 ---
 
