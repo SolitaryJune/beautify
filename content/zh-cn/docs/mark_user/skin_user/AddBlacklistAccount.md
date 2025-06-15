@@ -26,7 +26,7 @@ toc: true
 
 ### 访问鉴权网址
 
-[二次鉴权 | 添加黑名单账号 →](https://skin-api-sq.gushao.club/uploader_blacklist/)
+[二次鉴权 | 添加黑名单账号 →](https://beautify.gushao.club/docs/mark_user/uploader_blacklist/)
 
 **注意事项：**  
 
