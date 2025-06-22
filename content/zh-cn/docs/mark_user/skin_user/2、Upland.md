@@ -16,7 +16,7 @@ toc: true
 ### 请确保您已经额外授权：
 
 请邀请 **孤傲** 和 **XiuXinBot** 进群，**孤傲** 将授权机器人权限。  
-更多信息请参阅：[二次鉴权  →](/docs/mark_user/skin_user/authentication/)。
+更多信息请参阅：[二次鉴权  →](/docs/mark_user/skin_user/1authentication/)。
 
 ## 上传格式
 
