@@ -36,8 +36,29 @@
         message.style.margin = '0';
         message.style.lineHeight = '1.6'; // 增加行高
 
+        // 添加确认按钮
+        const confirmButton = document.createElement('button');
+        confirmButton.innerText = '我已知晓，继续访问';
+        confirmButton.style.marginTop = '30px';
+        confirmButton.style.padding = '10px 20px';
+        confirmButton.style.backgroundColor = '#007bff';
+        confirmButton.style.color = 'white';
+        confirmButton.style.border = 'none';
+        confirmButton.style.borderRadius = '4px';
+        confirmButton.style.cursor = 'pointer';
+        confirmButton.style.fontSize = '16px';
+        
+        // 点击按钮关闭覆盖层
+        confirmButton.addEventListener('click', () => {
+            overlay.style.opacity = '0';
+            setTimeout(() => {
+                document.body.removeChild(overlay);
+            }, 500); // 等待淡出动画完成
+        });
+
         overlay.appendChild(icon);
         overlay.appendChild(message);
+        overlay.appendChild(confirmButton);
         document.body.appendChild(overlay);
 
         // 触发淡入效果
