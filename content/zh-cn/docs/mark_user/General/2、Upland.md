@@ -8,7 +8,7 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "foot_user"
+    parent: "General"
     weight: 20
 toc: true
 ---

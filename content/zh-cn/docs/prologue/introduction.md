@@ -34,24 +34,24 @@ toc: true
 
 ### 皮肤作者版教程
 
-- 1. [首次使用：进行两次鉴权]({{% relref "../mark_user/skin_user/1、Authentication.md" %}})
-- 2. [鉴权完成：上传文件至打标系统]({{% relref "../mark_user/skin_user/2、Upland.md" %}})
-- 3. [兑换与使用打标文件]({{% relref "../mark_user/skin_user/3、ExchangeSkin.md" %}})
-- 4. [搜索与打标系统查找文件]({{% relref "../mark_user/skin_user/4、SearchSkin.md" %}})
-- 5. [适配预览皮肤与图标文件]({{% relref "../mark_user/skin_user/AdaptationPreview.md" %}})
-- 6. [添加黑名单账号]({{% relref "../mark_user/skin_user/AddBlacklistAccount.md" %}})
-- 7. [推荐素材与获取分成]({{% relref "../mark_user/skin_user/Divide.md" %}})
-- 8. [手动打标指南]({{% relref "../mark_user/skin_user/MarkByHand.md" %}})
-- 9. [生成卡密与上架]({{% relref "../mark_user/skin_user/SkinCard.md" %}})
-- 10. [查询标记状态]({{% relref "../mark_user/skin_user/SkinCheck.md" %}})
-- 11. [查看与上传格式要求]({{% relref "../mark_user/skin_user/UploadFormat.md" %}})
-- 12. [使用额外功能指南]({{% relref "../mark_user/skin_user/UseExtraservice.md" %}})
+- 1. [首次使用：进行两次鉴权]({{% relref "../mark_user/General/1、Authentication.md" %}})
+- 2. [鉴权完成：上传文件至打标系统]({{% relref "../mark_user/General/2、Upland.md" %}})
+- 3. [兑换与使用打标文件]({{% relref "../mark_user/General/3、ExchangeSkin.md" %}})
+- 4. [搜索与打标系统查找文件]({{% relref "../mark_user/General/4、SearchSkin.md" %}})
+- 5. [适配预览皮肤与图标文件]({{% relref "../mark_user/General/AdaptationPreview.md" %}})
+- 6. [添加黑名单账号]({{% relref "../mark_user/General/AddBlacklistAccount.md" %}})
+- 7. [推荐素材与获取分成]({{% relref "../mark_user/General/Divide.md" %}})
+- 8. [手动打标指南]({{% relref "../mark_user/General/MarkByHand.md" %}})
+- 9. [生成卡密与上架]({{% relref "../mark_user/General/SkinCard.md" %}})
+- 10. [查询标记状态]({{% relref "../mark_user/General/SkinCheck.md" %}})
+- 11. [查看与上传格式要求]({{% relref "../mark_user/General/UploadFormat.md" %}})
+- 12. [使用额外功能指南]({{% relref "../mark_user/General/UseExtraservice.md" %}})
 
 ---
 
 ## 额外服务
 
-查看全部额外服务：  
+查看全部额外服务（一次购买永久使用，支持所有设备）：  
 [额外服务 →]({{% relref "extra_service" %}})
 
 ### 字体服务
@@ -68,16 +68,16 @@ toc: true
 
 ### 皮肤服务
 
-- [一键署名Pro教程 →]({{% relref "../extra_service/skin/OneClickSignaturePro.md" %}})
-- [一键改色教程 →]({{% relref "../extra_service/skin/PicColorChange.md" %}})
-- [图命灵变Pro教程 →]({{% relref "../extra_service/skin/PicMagicPro.md" %}})
-- [素材分割Pro教程 →]({{% relref "../extra_service/skin/PicPartPro.md" %}})
-- [一键转系统Pro教程 →]({{% relref "../extra_service/skin/SkinConversionPro.md" %}})
-- [皮肤加密Pro教程 →]({{% relref "../extra_service/skin/SkinEncryptPro.md/#%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B" %}})
-- [打前景Pro教程 →]({{% relref "../extra_service/skin/SkinForward.md" %}})
-- [一键换Logo/底包切片合成/批量重命名/wx批量换素材教程 →]({{% relref "../extra_service/skin/SkinLogo.md" %}})
-- [在线上传文件打标教程 →]({{% relref "../extra_service/skin/SkinUploadHand.md" %}})
-- [图片水印Pro教程 →]({{% relref "../extra_service/skin/SkinWaterPro.md" %}})
+- [一键署名Pro（15元）教程 →]({{% relref "../extra_service/skin/OneClickSignaturePro.md" %}})
+- [一键改色Pro（18元）教程 →]({{% relref "../extra_service/skin/PicColorChange.md" %}})
+- [图命灵变Pro（45元 含图命灵变Pro｜素材分割Pro ）教程 →]({{% relref "../extra_service/skin/PicMagicPro.md" %}})
+- [素材分割Pro（45元 含图命灵变Pro｜素材分割Pro ）教程 →]({{% relref "../extra_service/skin/PicPartPro.md" %}})
+- [一键转系统Pro（购买加密赠送）教程 →]({{% relref "../extra_service/skin/SkinConversionPro.md" %}})
+- [皮肤加密Pro（35元）教程 →]({{% relref "../extra_service/skin/SkinEncryptPro.md/#%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B" %}})
+- [打前景Pro（10元）教程 →]({{% relref "../extra_service/skin/SkinForward.md" %}})
+- [一键换Logo/底包切片合成/批量重命名/wx批量换素材（15元）教程 →]({{% relref "../extra_service/skin/SkinLogo.md" %}})
+- [在线上传文件打标（单买60r，购入打标后15r同时赠送管理系统打标）教程 →]({{% relref "../extra_service/skin/SkinUploadHand.md" %}})
+- [图片水印Pro（10元）教程 →]({{% relref "../extra_service/skin/SkinWaterPro.md" %}})
 
 ---
 

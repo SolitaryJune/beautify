@@ -1,6 +1,6 @@
 ---
-title: "字体作者"
-description: "字体作者"
+title: "通用教程（必看）"
+description: "通用教程（必看）"
 lead: ""
 date: 2020-11-16T13:59:39+01:00
 lastmod: 2020-11-16T13:59:39+01:00
@@ -9,6 +9,6 @@ images: []
 menu:
   docs:
     parent: "mark_user"
-    identifier: "foot_user"
-weight: 15
+    identifier: "General"
+weight: 10
 ---
