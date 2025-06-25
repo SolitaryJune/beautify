@@ -29,7 +29,7 @@ toc: true
 
 ## 使用打标机
 
-皮肤 / 图标等作者已购买打标机功能的使用说明：
+已购买打标机功能作者的使用说明：
 [使用打标机 →]({{% relref "mark_user" %}})
 
 ### 通用教程（必看）
@@ -45,15 +45,15 @@ toc: true
 
 ### 皮肤作者版额外教程
 
-- 8. [手动打标指南]({{% relref "../mark_user/General/MarkByHand.md" %}})
-- 10. [查询标记状态]({{% relref "../mark_user/General/SkinCheck.md" %}})
-- 7. [推荐素材与获取分成]({{% relref "../mark_user/General/Divide.md" %}})
+- 8. [手动打标指南]({{% relref "../mark_user/skin_user/SkinMarkByHand.md.md" %}})
+- 10. [查询标记状态]({{% relref "../mark_user/skin_user/SkinCheck.md" %}})
+- 7. [推荐素材与获取分成]({{% relref "../mark_user/skin_user/SkinDivide.md" %}})
 
 ### 字体作者版额外教程
 
-- 8. [手动打标指南]({{% relref "../mark_user/General/MarkByHand.md" %}})
-- 10. [查询标记状态]({{% relref "../mark_user/General/SkinCheck.md" %}})
-- 7. [推荐素材与获取分成]({{% relref "../mark_user/General/Divide.md" %}})
+- 8. [手动打标指南]({{% relref "../mark_user/foot_user/FontMarkByHand.md" %}})
+- 10. [查询标记状态]({{% relref "../mark_user/foot_user/FontCheck.md" %}})
+- 7. [推荐素材与获取分成]({{% relref "../mark_user/foot_user/Divide.md" %}})
 
 ### 音效作者版额外教程
 
