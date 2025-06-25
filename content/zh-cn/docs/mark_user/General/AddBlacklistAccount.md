@@ -8,7 +8,7 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "skin_user"
+    parent: "General"
     weight: 830
 toc: true
 ---

@@ -10,5 +10,5 @@ menu:
   docs:
     parent: "mark_user"
     identifier: "skin_user"
-weight: 15
+weight: 20
 ---

@@ -32,20 +32,34 @@ toc: true
 皮肤 / 图标等作者已购买打标机功能的使用说明：
 [使用打标机 →]({{% relref "mark_user" %}})
 
-### 皮肤作者版教程
+### 通用教程（必看）
 
 - 1. [首次使用：进行两次鉴权]({{% relref "../mark_user/General/1、Authentication.md" %}})
 - 2. [鉴权完成：上传文件至打标系统]({{% relref "../mark_user/General/2、Upland.md" %}})
-- 3. [兑换与使用打标文件]({{% relref "../mark_user/General/3、ExchangeSkin.md" %}})
-- 4. [搜索与打标系统查找文件]({{% relref "../mark_user/General/4、SearchSkin.md" %}})
+- 3. [兑换与使用打标文件]({{% relref "../mark_user/General/3、ExchangeFile.md" %}})
+- 4. [搜索与打标系统查找文件]({{% relref "../mark_user/General/4、SearchFile.md" %}})
 - 5. [适配预览皮肤与图标文件]({{% relref "../mark_user/General/AdaptationPreview.md" %}})
 - 6. [添加黑名单账号]({{% relref "../mark_user/General/AddBlacklistAccount.md" %}})
-- 7. [推荐素材与获取分成]({{% relref "../mark_user/General/Divide.md" %}})
-- 8. [手动打标指南]({{% relref "../mark_user/General/MarkByHand.md" %}})
-- 9. [生成卡密与上架]({{% relref "../mark_user/General/SkinCard.md" %}})
-- 10. [查询标记状态]({{% relref "../mark_user/General/SkinCheck.md" %}})
-- 11. [查看与上传格式要求]({{% relref "../mark_user/General/UploadFormat.md" %}})
+- 9. [生成卡密与上架]({{% relref "../mark_user/General/GenerateRedeemCard.md" %}})
 - 12. [使用额外功能指南]({{% relref "../mark_user/General/UseExtraservice.md" %}})
+
+### 皮肤作者版额外教程
+
+- 8. [手动打标指南]({{% relref "../mark_user/General/MarkByHand.md" %}})
+- 10. [查询标记状态]({{% relref "../mark_user/General/SkinCheck.md" %}})
+- 7. [推荐素材与获取分成]({{% relref "../mark_user/General/Divide.md" %}})
+
+### 字体作者版额外教程
+
+- 8. [手动打标指南]({{% relref "../mark_user/General/MarkByHand.md" %}})
+- 10. [查询标记状态]({{% relref "../mark_user/General/SkinCheck.md" %}})
+- 7. [推荐素材与获取分成]({{% relref "../mark_user/General/Divide.md" %}})
+
+### 音效作者版额外教程
+
+- 8. [手动打标指南]({{% relref "../mark_user/General/MarkByHand.md" %}})
+- 10. [查询标记状态]({{% relref "../mark_user/General/SkinCheck.md" %}})
+- 7. [推荐素材与获取分成]({{% relref "../mark_user/General/Divide.md" %}})
 
 ---
 

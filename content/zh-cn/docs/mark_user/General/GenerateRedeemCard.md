@@ -1,5 +1,5 @@
 ---
-title: "阅览、生成卡密（上架阿奇索等）"
+title: "阅览、生成|兑换 卡密（上架阿奇索等）"
 description: "作者 ｜ 孤傲"
 lead: "作者 ｜ 孤傲"
 date: 2021-08-19T08:49:31+00:00
@@ -8,7 +8,7 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "foot_user"
+    parent: "General"
     weight: 820
 toc: true
 ---
@@ -55,4 +55,4 @@ toc: true
 
 ## 🏪 上架到阿奇索
 
-![上架到阿奇索](/docs/mark_user/skin_user/SkinCard/image.png)
+![上架到阿奇索](/docs/mark_user/General/GenerateRedeemCard/image.png)
