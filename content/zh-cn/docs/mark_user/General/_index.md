@@ -10,5 +10,5 @@ menu:
   docs:
     parent: "mark_user"
     identifier: "General"
-weight: 10
+weight: 5
 ---
