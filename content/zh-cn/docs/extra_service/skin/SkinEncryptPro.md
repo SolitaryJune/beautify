@@ -22,7 +22,6 @@ weight: 830
 #### 功能入口
 
 - 新通道：[皮肤加密Pro](/docs/extra_service/skin/SkinEncryptPro)
-- 旧通道：[皮肤加密Pro Old](/docs/extra_service/skin/SkinEncryptProOld)
 
 > **自动授权提示**  
 > 购买后立即生效，无需手动激活
