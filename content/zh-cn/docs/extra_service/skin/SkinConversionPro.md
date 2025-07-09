@@ -20,8 +20,7 @@ weight: 830
 
 #### 快速入口  
 
-- 新通道：[转系统Pro](/docs/extra_service/skin/SkinConversionPro/)  
-- 旧通道：[转系统Pro Old](/docs/extra_service/skin/SkinConversionProOld)
+- 新通道：[转系统Pro](/docs/extra_service/skin/SkinConversionPro/)
 
 ---
 
