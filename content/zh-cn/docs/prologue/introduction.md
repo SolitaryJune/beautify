@@ -80,7 +80,7 @@ toc: true
 - [在线上传音效打标教程 →]({{% relref "../extra_service/sound/UploadHand.md" %}})
 - [推荐音效功能 | 获得分成教程 →]({{% relref "../extra_service/sound/Divide.md" %}})
 
-### 皮肤服务
+### 皮肤/素材服务
 
 - [一键署名Pro（15元）教程 →]({{% relref "../extra_service/skin/OneClickSignaturePro.md" %}})
 - [一键改色Pro（18元）教程 →]({{% relref "../extra_service/skin/PicColorChange.md" %}})
@@ -92,6 +92,7 @@ toc: true
 - [一键换Logo/底包切片合成/批量重命名/wx批量换素材（15元）教程 →]({{% relref "../extra_service/skin/SkinLogo.md" %}})
 - [在线上传文件打标（单买60r，购入打标后15r同时赠送管理系统打标）教程 →]({{% relref "../extra_service/skin/SkinUploadHand.md" %}})
 - [图片水印Pro（10元）教程 →]({{% relref "../extra_service/skin/SkinWaterPro.md" %}})
+- [一键修改色值xml（10元）教程 →]({{% relref "../extra_service/skin/XML.md" %}})
 
 ---
 
