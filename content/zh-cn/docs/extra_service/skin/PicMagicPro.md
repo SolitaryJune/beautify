@@ -17,7 +17,7 @@ weight: 830
 
 #### 基础说明  
 
-- 已购买打标机用户可免费获取密钥（卡密），请前往 [使用额外功能 →](/docs/mark_user/skin_user/useextraservice/)  
+- 已购买打标机用户可免费获取密钥（卡密），请前往 [使用额外功能 →](/docs/mark_user/General/useextraservice/)  
 - [点击跳转图命灵变Pro功能 →](/docs/extra_service/skin/PicMagicPro/)  
 
 ---

@@ -16,7 +16,7 @@ weight: 830
 ### 一键转系统Pro  
 
 **注：此功能为加密Pro专属，购买加密Pro后自动激活！**  
-已购买打标机用户无需额外购买，获取密钥（卡密）请前往 [使用额外功能](/docs/mark_user/skin_user/useextraservice/)。
+已购买打标机用户无需额外购买，获取密钥（卡密）请前往 [使用额外功能](/docs/mark_user/General/useextraservice/)。
 
 #### 快速入口  
 

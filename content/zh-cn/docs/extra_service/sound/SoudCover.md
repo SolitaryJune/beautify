@@ -30,7 +30,7 @@ weight: 830
 ### 使用教程  
 
 **已购买打标机用户无需购买此功能，获取密钥请参考：**  
-[使用额外功能指南 →](/docs/mark_user/skin_user/useextraservice/)  
+[使用额外功能指南 →](/docs/mark_user/General/useextraservice/)  
 
 1️⃣ **获取卡密密钥**  
 
@@ -46,7 +46,7 @@ weight: 830
 
 ### 购买与授权  
 
-- **购买链接**：[立即购买图片水印Pro →](https://shop.gushao.club/buy/20)  
+- **购买链接**：[立即购买音效转换 →](https://shop.gushao.club/buy/20)  
 - **自动授权**：购买后系统自动生效，无需额外操作  
 
 ---
