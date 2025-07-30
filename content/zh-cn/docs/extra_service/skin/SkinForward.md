@@ -14,7 +14,7 @@ weight: 830
 
 ### 打前景Pro（支持导入TIL - 此功能为打标机专属，支持所有设备）
 
-已购买打标机用户无需额外购买该功能，获取密钥（卡密）请前往 [使用额外功能 →](/docs/mark_user/General/useextraservice/)。
+已购买皮肤打标机用户无需额外购买该功能，获取密钥（卡密）请前往 [使用额外功能 →](/docs/mark_user/General/useextraservice/)。
 
 ---
 

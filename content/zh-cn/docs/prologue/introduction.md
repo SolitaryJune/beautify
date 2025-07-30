@@ -41,25 +41,25 @@ toc: true
 - 5. [适配预览皮肤与图标文件]({{% relref "../mark_user/General/AdaptationPreview.md" %}})
 - 6. [添加黑名单账号]({{% relref "../mark_user/General/AddBlacklistAccount.md" %}})
 - 9. [生成卡密与上架]({{% relref "../mark_user/General/GenerateRedeemCard.md" %}})
-- 12. [使用额外功能指南]({{% relref "../mark_user/General/UseExtraservice.md" %}})
+- 10. [使用额外功能指南]({{% relref "../mark_user/General/UseExtraservice.md" %}})
 
 ### 皮肤作者版额外教程
 
-- 8. [手动打标指南]({{% relref "../mark_user/skin_user/SkinMarkByHand.md.md" %}})
-- 10. [查询标记状态]({{% relref "../mark_user/skin_user/SkinCheck.md" %}})
-- 7. [推荐素材与获取分成]({{% relref "../mark_user/skin_user/SkinDivide.md" %}})
+- 1. [手动打标指南]({{% relref "../mark_user/skin_user/SkinMarkByHand.md.md" %}})
+- 2. [查询标记状态]({{% relref "../mark_user/skin_user/SkinCheck.md" %}})
+- 3. [推荐素材与获取分成]({{% relref "../mark_user/skin_user/SkinDivide.md" %}})
 
 ### 字体作者版额外教程
 
-- 8. [手动打标指南]({{% relref "../mark_user/foot_user/FontMarkByHand.md" %}})
-- 10. [查询标记状态]({{% relref "../mark_user/foot_user/FontCheck.md" %}})
-- 7. [推荐素材与获取分成]({{% relref "../mark_user/foot_user/Divide.md" %}})
+- 1. [手动打标指南]({{% relref "../mark_user/foot_user/FontMarkByHand.md" %}})
+- 2. [查询标记状态]({{% relref "../mark_user/foot_user/FontCheck.md" %}})
+- 3. [推荐素材与获取分成]({{% relref "../mark_user/foot_user/Divide.md" %}})
 
 ### 音效作者版额外教程
 
-- 8. [手动打标指南]({{% relref "../mark_user/General/MarkByHand.md" %}})
-- 10. [查询标记状态]({{% relref "../mark_user/General/SkinCheck.md" %}})
-- 7. [推荐素材与获取分成]({{% relref "../mark_user/General/Divide.md" %}})
+- 1. [手动打标指南]({{% relref "../mark_user/General/MarkByHand.md" %}})
+- 2. [查询标记状态]({{% relref "../mark_user/General/SkinCheck.md" %}})
+- 3. [推荐素材与获取分成]({{% relref "../mark_user/General/Divide.md" %}})
 
 ---
 
