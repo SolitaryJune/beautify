@@ -80,6 +80,10 @@ toc: true
 - [在线上传音效打标教程 →]({{% relref "../extra_service/sound/UploadHand.md" %}})
 - [推荐音效功能 | 获得分成教程 →]({{% relref "../extra_service/sound/Divide.md" %}})
 
+### 水印（出图等）服务
+
+- [PSD图层分离（15元）教程 →]({{% relref "../extra_service/watermark/WatermarkPSDSplitting.md" %}})
+
 ### 皮肤/素材服务
 
 - [一键署名Pro（15元）教程 →]({{% relref "../extra_service/skin/OneClickSignaturePro.md" %}})
