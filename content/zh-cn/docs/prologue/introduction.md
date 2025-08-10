@@ -71,6 +71,7 @@ toc: true
 ### 字体服务
 
 - [字体转换教程 →]({{% relref "../extra_service/font/FontCover.md" %}})
+- [字体调整（45元）（支持所有设备） →]({{% relref "../extra_service/font/FontAdjustment.md" %}})
 - [在线上传字体打标教程 →]({{% relref "../extra_service/font/UploadHand.md" %}})
 - [推荐字体功能 | 获得分成教程 →]({{% relref "../extra_service/font/Divide.md" %}})
 
