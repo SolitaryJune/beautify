@@ -15,7 +15,7 @@ weight: 830
 
 ### 皮肤加密Pro（定价35元永久授权，全设备通用）
 
-已购买皮肤打标机用户可免费获取密钥，前往[额外功能页面](/docs/mark_user/General/useextraservice/)领取。
+已购买皮肤打标机用户可免费获取密钥，前往[额外功能页面](/mark_user/general/useextraservice/)领取。
 
 ---
 

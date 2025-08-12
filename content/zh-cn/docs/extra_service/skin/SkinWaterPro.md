@@ -31,7 +31,7 @@ weight: 830
 ### 使用教程  
 
 **已购买皮肤打标机用户无需购买此功能，获取密钥请参考：**  
-[使用额外功能指南 →](/docs/mark_user/General/useextraservice/)  
+[使用额外功能指南 →](/mark_user/general/useextraservice/)  
 
 1️⃣ **获取卡密密钥**  
 

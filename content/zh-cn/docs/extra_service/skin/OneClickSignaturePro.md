@@ -16,7 +16,7 @@ weight: 830
 ### 一键署名Pro（此功能定价15元永久，支持所有设备）
 
 **已购买皮肤打标机用户无需购买该功能，获取密钥（卡密）请前往**  
-[使用额外功能 →](/docs/mark_user/General/useextraservice/)
+[使用额外功能 →](/mark_user/general/useextraservice/)
 
 **功能入口**  
 [一键署名Pro →](/docs/extra_service/skin/OneClickSignaturePro/)
