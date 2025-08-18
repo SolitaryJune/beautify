@@ -42,24 +42,22 @@ toc: true
 - 6. [添加黑名单账号]({{% relref "../mark_user/General/AddBlacklistAccount.md" %}})
 - 9. [生成卡密与上架]({{% relref "../mark_user/General/GenerateRedeemCard.md" %}})
 - 10. [使用额外功能指南]({{% relref "../mark_user/General/UseExtraservice.md" %}})
+- 11. [查询标记状态]({{% relref "../mark_user/General/Check.md" %}})
 
 ### 皮肤作者版额外教程
 
 - 1. [手动打标指南]({{% relref "../mark_user/skin_user/SkinMarkByHand.md.md" %}})
-- 2. [查询标记状态]({{% relref "../mark_user/skin_user/SkinCheck.md" %}})
-- 3. [推荐素材与获取分成]({{% relref "../mark_user/skin_user/SkinDivide.md" %}})
+- 2. [推荐素材与获取分成]({{% relref "../mark_user/skin_user/SkinDivide.md" %}})
 
 ### 字体作者版额外教程
 
 - 1. [手动打标指南]({{% relref "../mark_user/foot_user/FontMarkByHand.md" %}})
-- 2. [查询标记状态]({{% relref "../mark_user/foot_user/FontCheck.md" %}})
-- 3. [推荐素材与获取分成]({{% relref "../mark_user/foot_user/Divide.md" %}})
+- 2. [推荐素材与获取分成]({{% relref "../mark_user/foot_user/Divide.md" %}})
 
 ### 音效作者版额外教程
 
 - 1. [手动打标指南]({{% relref "../mark_user/General/MarkByHand.md" %}})
-- 2. [查询标记状态]({{% relref "../mark_user/General/SkinCheck.md" %}})
-- 3. [推荐素材与获取分成]({{% relref "../mark_user/General/Divide.md" %}})
+- 2. [推荐素材与获取分成]({{% relref "../mark_user/General/Divide.md" %}})
 
 ---
 
@@ -84,6 +82,11 @@ toc: true
 ### 水印（出图等）服务
 
 - [PSD图层分离（15元）教程 →]({{% relref "../extra_service/watermark/WatermarkPSDSplitting.md" %}})
+
+### 定制V服务
+
+- [一键配套（元）教程 →]({{% relref "../extra_service/watermark/WatermarkPSDSplitting.md" %}})
+- [一键对标（元）教程 →]({{% relref "../extra_service/watermark/WatermarkPSDSplitting.md" %}})
 
 ### 皮肤/素材服务
 
