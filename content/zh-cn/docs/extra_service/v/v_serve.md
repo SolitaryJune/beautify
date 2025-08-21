@@ -19,7 +19,7 @@ weight: 830
 
 欢迎使用[一键对标 →](/docs/extra_service/v/Icon/)。
 
-欢迎使用[一键修改色值XML →](/docs/extra_service/skin/Xml)。
+欢迎使用[一键修改色值XML  →](/docs/extra_service/skin/Xml)。
 
 ---
 
