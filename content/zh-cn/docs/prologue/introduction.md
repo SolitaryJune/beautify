@@ -87,6 +87,7 @@ toc: true
 
 - [一键配套（元）教程 →]({{% relref "../extra_service/v/v_serve.md" %}})
 - [一键对标（元）教程 →]({{% relref "../extra_service/v/v_serve.md" %}})
+- [一键修改色值XML  →]({{% relref "../extra_service/v/v_serve.md" %}})
 
 ### 皮肤/素材服务
 
