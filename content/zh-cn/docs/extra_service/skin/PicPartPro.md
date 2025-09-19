@@ -17,7 +17,7 @@ weight: 830
 
 **此功能定价45元永久**（含图命灵变Pro & 素材分割Pro，支持所有设备）  
 
-> 已购买皮肤打标机用户无需购买该功能，获取密钥（卡密）请前往 [使用额外功能 →](/mark_user/general/useextraservice/)
+> 已购买皮肤打标机用户无需购买该功能，获取密钥（卡密）请前往 [使用额外功能 →](/docs/mark_user/general/useextraservice/)
 
 欢迎使用 [素材分割Pro 新（设备性能要求较高，切割更丰富，识别更强） →](/docs/extra_service/skin/PicPartPro/)
 

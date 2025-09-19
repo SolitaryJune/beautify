@@ -16,7 +16,7 @@ weight: 830
 ### 一键改色（此功能定价18元永久，支持所有设备）
 
 **已购买皮肤打标机用户无需购买该功能，获取密钥（卡密）请前往**  
-[使用额外功能 →](/mark_user/general/useextraservice/)
+[使用额外功能 →](/docs/mark_user/general/useextraservice/)
 
 **功能入口**  
 [一键改色 →](/docs/extra_service/skin/PicColorChange/)
