@@ -646,10 +646,17 @@
 </head>
 
 <body>
-  <h1>一键底包/前景模板</h1>
-  <div class="hint">
-    上传后缀为 .bds 或 .bdi 的文件。一键底包/前景模板。
+  <div id="authSection">
+    <h1>请输入密钥</h1>
+    <input type="text" id="encryptedCode" placeholder="在此输入密钥">
+    <button id="verifyButton">验证密钥</button>
   </div>
+  <div id="mainContent" style="display: none;">
+    <h1>一键底包/前景模板</h1>
+    <div class="hint">
+      上传后缀为 .bds 或 .bdi 的文件。一键底包/前景模板。
+    </div>
+
 
   <div class="toolbar">
     <div class="panel">
