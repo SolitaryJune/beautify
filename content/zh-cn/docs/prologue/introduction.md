@@ -102,6 +102,8 @@ toc: true
 - [在线上传文件打标（单买60r，购入打标后15r同时赠送管理系统打标）教程 →]({{% relref "../extra_service/skin/SkinUploadHand.md" %}})
 - [图片水印Pro（10元）教程 →]({{% relref "../extra_service/skin/SkinWaterPro.md" %}})
 - [一键修改色值xml（10元）教程 →]({{% relref "../extra_service/skin/XML.md" %}})
+- [一键前景按键模板（元）教程 →]({{% relref "../extra_service/skin/OneClickBaseKeyboard.md" %}})
+- [一键底包/前景模板（元）教程 →]({{% relref "../extra_service/skin/OneClickBaseTemplate.md" %}})
 
 ---
 
