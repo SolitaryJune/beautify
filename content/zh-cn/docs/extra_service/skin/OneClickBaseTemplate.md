@@ -1,5 +1,5 @@
 ---
-title: "一键底包/前景模板"
+title: "一键贴纸按键模板"
 description: "作者 ｜ 孤傲"
 lead: "作者 ｜ 孤傲"
 date: 2021-08-19T08:49:31+00:00
@@ -13,13 +13,13 @@ toc: true
 weight: 830
 ---
 
-### 一键底包/前景模板（此功能定价X元永久，支持所有设备）
+### 一键贴纸按键模板（此功能定价X元永久，支持所有设备）
 
 **已购买皮肤打标机用户无需购买该功能，获取密钥（卡密）请前往**  
 [使用额外功能 →](/docs/mark_user/general/useextraservice/)
 
 **功能入口**  
-[一键底包/前景模板 →](/docs/extra_service/skin/OneClickBaseTemplate/)
+[一键贴纸按键模板 →](/docs/extra_service/skin/OneClickBaseTemplate/)
 
 ---
 

@@ -103,7 +103,7 @@ toc: true
 - [图片水印Pro（10元）教程 →]({{% relref "../extra_service/skin/SkinWaterPro.md" %}})
 - [一键修改色值xml（10元）教程 →]({{% relref "../extra_service/skin/XML.md" %}})
 - [一键贴纸前景模板（元）教程 →]({{% relref "../extra_service/skin/OneClickBaseKeyboard.md" %}})
-- [一键底包/前景模板（元）教程 →]({{% relref "../extra_service/skin/OneClickBaseTemplate.md" %}})
+- [一键贴纸按键模板（元）教程 →]({{% relref "../extra_service/skin/OneClickBaseTemplate.md" %}})
 
 ---
 
