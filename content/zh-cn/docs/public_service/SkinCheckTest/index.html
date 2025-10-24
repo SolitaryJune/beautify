@@ -2,151 +2,251 @@
 <html lang="zh-CN">
 
 <head>
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>打标强度测试工具</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9848692070506076"
-     crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * {
+      font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      background-color: #f4f4f4;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    .container {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      width: 100%;
+    /* 日间模式 */
+    body.light-mode {
+      background-color: #e0e0e0;
+      color: #333333;
     }
 
-    h1,
-    h2 {
-      margin-bottom: 20px;
+    .light-mode .neumorphic-card {
+      background: #e0e0e0;
+      box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
     }
 
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    input {
-      width: calc(100% - 22px);
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-    }
-
-    button {
-      width: 100%;
-      padding: 10px;
+    .light-mode .neumorphic-input {
+      background: #e0e0e0;
+      box-shadow: inset 6px 6px 12px #bebebe, inset -6px -6px 12px #ffffff;
       border: none;
-      border-radius: 4px;
-      background-color: #007bff;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
+      color: #333333;
     }
 
-    button:hover {
-      background-color: #0056b3;
+    .light-mode .neumorphic-btn {
+      background: #e0e0e0;
+      box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+      color: #333333;
     }
 
-    #message {
-      margin-top: 10px;
-      color: red;
+    .light-mode .neumorphic-btn:hover {
+      box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
     }
 
-    #uploadSection {
-      display: none;
-      margin-top: 20px;
+    .light-mode .neumorphic-btn:active {
+      box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
     }
 
-    .progress-bar {
+    /* 夜间模式 */
+    body.dark-mode {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+
+    .dark-mode .neumorphic-card {
+      background: #1e1e1e;
+      box-shadow: 6px 6px 12px #141414, -6px -6px 12px #2a2a2a;
+    }
+
+    .dark-mode .neumorphic-input {
+      background: #1e1e1e;
+      box-shadow: inset 6px 6px 12px #141414, inset -6px -6px 12px #2a2a2a;
+      border: none;
+      color: #e0e0e0;
+    }
+
+    .dark-mode .neumorphic-btn {
+      background: #1e1e1e;
+      box-shadow: 6px 6px 12px #141414, -6px -6px 12px #2a2a2a;
+      color: #e0e0e0;
+    }
+
+    .dark-mode .neumorphic-btn:hover {
+      box-shadow: 4px 4px 8px #141414, -4px -4px 8px #2a2a2a;
+    }
+
+    .dark-mode .neumorphic-btn:active {
+      box-shadow: inset 4px 4px 8px #141414, inset -4px -4px 8px #2a2a2a;
+    }
+
+    /* 通用样式 */
+    .neumorphic-card {
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .neumorphic-input {
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
       width: 100%;
-      background-color: #f3f3f3;
-      border-radius: 4px;
-      margin-top: 10px;
+      transition: all 0.3s ease;
+      outline: none;
     }
 
-    .progress-bar div {
-      height: 10px;
-      background-color: #007bff;
-      width: 0%;
-      border-radius: 4px;
+    .neumorphic-input::placeholder {
+      opacity: 0.5;
+    }
+
+    .neumorphic-btn {
+      border-radius: 12px;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      min-height: 44px;
+    }
+
+    .neumorphic-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .progress-bar-fill {
+      height: 8px;
+      border-radius: 8px;
       transition: width 0.4s ease;
     }
 
-    #uploadMessage {
-      margin-top: 10px;
-      font-size: 14px;
+    .light-mode .progress-bar-fill {
+      background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .dark-mode .progress-bar-fill {
+      background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1000;
+    }
+
+    .file-type-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin: 0.25rem;
+    }
+
+    .light-mode .file-type-badge {
+      background: #e0e0e0;
+      box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+    }
+
+    .dark-mode .file-type-badge {
+      background: #1e1e1e;
+      box-shadow: 3px 3px 6px #141414, -3px -3px 6px #2a2a2a;
     }
   </style>
 </head>
 
-<body>
-  <div class="container">
-    <div id="loginSection">
-      <h1>登录</h1>
-      <form id="loginForm">
-        <label for="tel">手机号:</label>
-        <input type="text" id="tel" name="tel" required />
-        <button type="button" id="sendSmsBtn">发送短信验证码</button>
-        <div id="smsStatus"></div>
-        <label for="code" id="codeLabel" style="display: none">验证码:</label>
-        <input type="text" id="code" name="code" style="display: none" required />
-        <button type="submit" id="submitBtn" style="display: none">
-          登录
-        </button>
-      </form>
-      <div id="message"></div>
-    </div>
+<body class="light-mode min-h-screen flex items-center justify-center p-4">
+  <!-- 主题切换按钮 -->
+  <button id="themeToggle" class="theme-toggle neumorphic-btn">
+    <i class="lucide lucide-moon" id="themeIcon"></i>
+  </button>
 
-    <div id="uploadSection">
-      <h2>文件上传</h2>
-      <form id="uploadForm">
-        <label for="fileInput">选择文件:</label>
-        <input type="file" id="fileInput" accept=".bds,.bdi,.it,.zip" required />
-        <button type="submit">上传文件</button>
-      </form>
-      <div class="progress-bar" id="progressBar">
-        <div></div>
+  <div class="w-full max-w-md">
+    <div class="neumorphic-card">
+      <!-- 登录区域 -->
+      <div id="loginSection">
+        <h1 class="text-2xl sm:text-3xl font-bold mb-6 text-center">打标强度测试</h1>
+        <form id="loginForm" class="space-y-4">
+          <div>
+            <label for="tel" class="block mb-2 text-sm font-medium">手机号</label>
+            <input type="tel" id="tel" name="tel" required 
+                   class="neumorphic-input" 
+                   placeholder="请输入手机号" />
+          </div>
+          
+          <button type="button" id="sendSmsBtn" class="neumorphic-btn w-full">
+            <i class="lucide lucide-send mr-2"></i>发送验证码
+          </button>
+          
+          <div id="smsStatus" class="text-sm text-center"></div>
+          
+          <div id="codeSection" style="display: none;">
+            <label for="code" class="block mb-2 text-sm font-medium">验证码</label>
+            <input type="text" id="code" name="code" required 
+                   class="neumorphic-input" 
+                   placeholder="请输入验证码" />
+          </div>
+          
+          <button type="submit" id="submitBtn" style="display: none;" 
+                  class="neumorphic-btn w-full">
+            <i class="lucide lucide-log-in mr-2"></i>登录
+          </button>
+        </form>
+        <div id="message" class="mt-4 text-sm text-center"></div>
       </div>
-      <div id="uploadMessage"></div>
+
+      <!-- 上传区域 -->
+      <div id="uploadSection" style="display: none;">
+        <h2 class="text-xl sm:text-2xl font-bold mb-6 text-center">文件处理</h2>
+        
+        <!-- 文件类型说明 -->
+        <div class="mb-4 text-center">
+          <p class="text-sm mb-2">支持的文件类型：</p>
+          <div class="flex flex-wrap justify-center">
+            <span class="file-type-badge">.bds</span>
+            <span class="file-type-badge">.bdi</span>
+            <span class="file-type-badge">.it</span>
+            <span class="file-type-badge">.zip</span>
+            <span class="file-type-badge">.png</span>
+          </div>
+        </div>
+
+        <form id="uploadForm" class="space-y-4">
+          <div>
+            <label for="fileInput" class="block mb-2 text-sm font-medium">选择文件</label>
+            <input type="file" id="fileInput" 
+                   accept=".bds,.bdi,.it,.zip,.png" 
+                   required 
+                   class="neumorphic-input" />
+          </div>
+          
+          <button type="submit" class="neumorphic-btn w-full">
+            <i class="lucide lucide-upload mr-2"></i>上传并处理
+          </button>
+        </form>
+        
+        <div id="progressBar" class="mt-4 neumorphic-input" style="display: none; padding: 4px;">
+          <div class="progress-bar-fill" style="width: 0%;"></div>
+        </div>
+        
+        <div id="uploadMessage" class="mt-4 text-sm text-center"></div>
+        <div id="resultSection" class="mt-4"></div>
+      </div>
+
+      <!-- 页脚 -->
+      <div class="mt-6 text-center text-xs opacity-70">
+        &copy; <span id="currentYear">2025</span> GuShao's Beautify Service
+      </div>
     </div>
-    <footer>
-      &copy; <span id="currentYear">2025</span> GuShao's Beautify Service | 由 <a
-        href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=3567055800">孤傲</a> 强力驱动
-    </footer>
-
-
-
   </div>
-  <script>
-        // 检查来源，如果不是来自 beautify.gushao.club 则重定向
-        if (!document.referrer.includes('beautify.gushao.club')) {
-            window.location.href = '';
-        }
 
-        // 设置当前年份
-        (function () {
-            document.getElementById("currentYear").innerText = new Date().getFullYear();
-        })();
-    </script>
+  <!-- 引入必要的库 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
-  <!-- <script src="script.js"></script> -->
-  <script type="text/javascript">
-    document.write("<script src='script.js?" + Math.random() + "'><\/script>");
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
