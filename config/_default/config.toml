@@ -1,5 +1,6 @@
 baseurl = "/"
 canonifyURLs = false
+relativeURLs = false
 defaultContentLanguage = 'zh-cn'
 disableAliases = true
 disableHugoGeneratorInject = true

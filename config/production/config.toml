@@ -1,3 +1,5 @@
-baseurl = "https://beautify.gushao.club/"
+# 使用相对路径，让两个域名都能正常访问
+baseurl = "/"
 canonifyURLs = false
 sectionPagesMenu = "main"
+relativeURLs = true
