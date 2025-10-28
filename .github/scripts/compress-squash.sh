@@ -3,6 +3,10 @@
 
 set -e
 
+# 配置 Git 用户信息（GitHub Actions 环境）
+git config user.name "github-actions[bot]"
+git config user.email "github-actions[bot]@users.noreply.github.com"
+
 echo "::group::压缩 Git 历史 (完全压缩策略)"
 
 # 获取当前提交总数和统计信息

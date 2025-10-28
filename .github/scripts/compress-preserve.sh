@@ -3,6 +3,10 @@
 
 set -e
 
+# 配置 Git 用户信息（GitHub Actions 环境）
+git config user.name "github-actions[bot]"
+git config user.email "github-actions[bot]@users.noreply.github.com"
+
 KEEP_COUNT="${KEEP_COMMITS_COUNT:-10}"
 
 echo "::group::压缩 Git 历史 (保留策略)"

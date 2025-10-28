@@ -3,6 +3,10 @@
 
 set -e
 
+# 配置 Git 用户信息（GitHub Actions 环境）
+git config user.name "github-actions[bot]"
+git config user.email "github-actions[bot]@users.noreply.github.com"
+
 echo "::group::创建备份标签"
 
 # 生成带时间戳的备份标签名称
