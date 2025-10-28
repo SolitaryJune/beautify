@@ -85,7 +85,7 @@ jobs:
       contents: write
     env:
       CLEANUP_WORKFLOW_RUNS: 'true'
-      CLEANUP_GIT_HISTORY: 'false'
+      CLEANUP_GIT_HISTORY: 'true'
       KEEP_RUNS_COUNT: '10'
       KEEP_COMMITS_COUNT: '10'
       GIT_CLEANUP_STRATEGY: 'preserve'
