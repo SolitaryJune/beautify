@@ -7,18 +7,21 @@
 ## 📋 已完成的修改
 
 ### 1. 配置文件修改
+
 - ✅ `config/production/config.toml` - 设置 `baseurl = "/"` 和 `relativeURLs = true`
 - ✅ `config/_default/params.toml` - 注释掉硬编码的域名配置
 - ✅ 移除了不必要的 `production-bond` 环境配置
 
 ### 2. 构建验证
+
 - ✅ 构建成功完成
 - ✅ 生成的 HTML 使用相对路径（`href=./`）
 - ✅ 所有资源链接（CSS、JS、字体、图片）都是相对路径
 
 ## 🧪 测试结果
 
-### 生成的链接格式示例：
+### 生成的链接格式示例
+
 ```html
 <!-- 导航链接 -->
 <a href=./>首页</a>
@@ -31,6 +34,7 @@
 ```
 
 所有链接都是相对路径，这意味着：
+
 - ✅ 在 `beautify.gushao.club` 访问时，链接会自动解析为 `https://beautify.gushao.club/docs/`
 - ✅ 在 `beautify.gushao.bond` 访问时，链接会自动解析为 `https://beautify.gushao.bond/docs/`
 
@@ -82,13 +86,17 @@ npx http-server public -p 8080
 ## 📝 注意事项
 
 ### SEO 考虑
+
 由于两个域名内容完全相同，建议：
+
 1. 选择一个主域名（如 `beautify.gushao.club`）
 2. 考虑将另一个域名 301 重定向到主域名
 3. 或者在 HTML 中添加 canonical 标签指向主域名
 
 ### 如何添加 Canonical 标签
+
 如果需要，可以在 Hugo 模板中添加：
+
 ```html
 <link rel="canonical" href="https://beautify.gushao.club{{ .RelPermalink }}" />
 ```
@@ -96,12 +104,14 @@ npx http-server public -p 8080
 ## 🎉 总结
 
 配置已完成！现在你可以：
+
 - ✅ 一次构建，两个域名都能访问
 - ✅ 无需维护两套配置
 - ✅ 链接在各自域名下正常工作
 - ✅ 无冲突，无跨域问题
 
 如有问题，请检查：
+
 1. DNS 配置是否正确
 2. Vercel 域名设置是否都已添加
 3. SSL 证书是否已自动配置

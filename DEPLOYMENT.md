@@ -1,6 +1,7 @@
 # 双域名部署指南
 
 本项目已配置为**一次构建，支持多个域名访问**：
+
 - `beautify.gushao.club`
 - `beautify.gushao.bond`
 
@@ -9,6 +10,7 @@
 项目使用**相对路径 (relativeURLs)**，这样同一份构建产物可以在多个域名下正常工作，无需为每个域名单独构建。
 
 ### 关键配置
+
 - `baseurl = "/"` - 使用根路径
 - `relativeURLs = true` - 生产环境启用相对路径
 - `canonifyURLs = false` - 不强制转换为绝对路径
@@ -41,14 +43,16 @@ npm run build
 确保两个域名的 DNS 都正确指向 Vercel：
 
 ### beautify.gushao.club
-```
+
+```text
 类型: CNAME
 名称: beautify
 值: cname.vercel-dns.com
 ```
 
 ### beautify.gushao.bond
-```
+
+```text
 类型: CNAME
 名称: beautify
 值: cname.vercel-dns.com
@@ -67,11 +71,13 @@ npm run build
 ## 注意事项
 
 ### ✅ 优点
+
 - 一次构建，节省资源
 - 配置简单，易于维护
 - 两个域名完全同步，不会出现内容不一致
 
 ### ⚠️ SEO 考虑
+
 如果两个域名内容完全相同，搜索引擎可能认为是重复内容。建议：
 
 1. **选择主域名**：例如 `beautify.gushao.club` 作为主域名
@@ -81,6 +87,7 @@ npm run build
 ### 🔧 如果需要域名特定配置
 
 如果将来需要为不同域名显示不同内容，可以：
+
 - 在模板中使用 `{{ .Site.BaseURL }}` 判断当前域名
 - 或者使用 JavaScript 检测 `window.location.hostname`
 

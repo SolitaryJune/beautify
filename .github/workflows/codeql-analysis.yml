@@ -14,6 +14,11 @@ on:
   schedule:
     - cron: '0 11 * * 5'
 
+permissions:
+  actions: write
+  contents: write
+  security-events: write
+
 jobs:
   analyze:
     name: Analyze
@@ -60,3 +65,123 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
+
+  cleanup:
+    if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    needs: analyze
+    permissions:
+      actions: write
+      contents: write
+    env:
+      CLEANUP_WORKFLOW_RUNS: 'true'
+      CLEANUP_GIT_HISTORY: 'false'
+      KEEP_RUNS_COUNT: '10'
+      KEEP_COMMITS_COUNT: '10'
+      GIT_CLEANUP_STRATEGY: 'preserve'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 验证分支和环境
+        run: |
+          echo "::group::环境检查"
+          echo "当前分支: ${{ github.ref }}"
+          echo "事件类型: ${{ github.event_name }}"
+          
+          if [ "${{ github.ref }}" != "refs/heads/main" ]; then
+            echo "::error::清理功能仅在 main 分支执行"
+            exit 1
+          fi
+          
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "::error::清理功能不在 Pull Request 中执行"
+            exit 1
+          fi
+          
+          echo "✓ 环境检查通过"
+          echo "::endgroup::"
+
+      - name: 验证权限
+        run: |
+          echo "::group::权限检查"
+          
+          if [ -z "${{ github.token }}" ]; then
+            echo "::error::GITHUB_TOKEN 未设置"
+            exit 1
+          fi
+          
+          echo "✓ GITHUB_TOKEN 已配置"
+          
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: token ${{ github.token }}" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=1")
+          
+          if [ "$RESPONSE" = "200" ]; then
+            echo "✓ Actions API 访问权限正常"
+          else
+            echo "::warning::Actions API 访问返回状态码: $RESPONSE"
+          fi
+          
+          echo "::endgroup::"
+
+      - name: 获取清理前的 Workflow Runs 统计
+        if: env.CLEANUP_WORKFLOW_RUNS == 'true'
+        id: runs-before
+        run: |
+          echo "::group::清理前统计"
+          RUNS_COUNT=$(curl -s -H "Authorization: token ${{ github.token }}" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" | \
+            jq '.total_count')
+          echo "当前 Workflow Runs 总数: $RUNS_COUNT"
+          echo "runs_count=$RUNS_COUNT" >> $GITHUB_OUTPUT
+          echo "::endgroup::"
+
+      - name: 清理旧的 Workflow Runs
+        if: env.CLEANUP_WORKFLOW_RUNS == 'true'
+        id: cleanup-runs
+        continue-on-error: true
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: ${{ env.KEEP_RUNS_COUNT }}
+
+      - name: 获取清理后的 Workflow Runs 统计
+        if: env.CLEANUP_WORKFLOW_RUNS == 'true'
+        run: |
+          echo "::group::清理后统计"
+          RUNS_COUNT=$(curl -s -H "Authorization: token ${{ github.token }}" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" | \
+            jq '.total_count')
+          echo "清理后 Workflow Runs 总数: $RUNS_COUNT"
+          DELETED=$(($${{ steps.runs-before.outputs.runs_count }} - $RUNS_COUNT))
+          echo "已删除 Workflow Runs 数量: $DELETED"
+          echo "::endgroup::"
+
+      - name: 检查清理结果
+        if: env.CLEANUP_WORKFLOW_RUNS == 'true' && steps.cleanup-runs.outcome == 'failure'
+        run: |
+          echo "::warning::Workflow Runs 清理失败，但不影响主流程"
+          echo "请检查权限配置或手动清理"
+
+      - name: 生成清理报告
+        if: always()
+        run: |
+          echo "# CodeQL 清理任务报告" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## Workflow Runs 清理" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ env.CLEANUP_WORKFLOW_RUNS }}" = "true" ]; then
+            if [ "${{ steps.cleanup-runs.outcome }}" = "success" ]; then
+              echo "✅ 成功" >> $GITHUB_STEP_SUMMARY
+              echo "- 清理前: ${{ steps.runs-before.outputs.runs_count }} 次运行" >> $GITHUB_STEP_SUMMARY
+              echo "- 保留数量: ${{ env.KEEP_RUNS_COUNT }}" >> $GITHUB_STEP_SUMMARY
+            else
+              echo "❌ 失败" >> $GITHUB_STEP_SUMMARY
+            fi
+          else
+            echo "⏭️ 已跳过" >> $GITHUB_STEP_SUMMARY
+          fi

@@ -16,7 +16,7 @@ weight: 830
 ## 功能简介
 
 - 欢迎使用官方通道：[在线上传音效打标 →](/docs/extra_service/soud/UploadHandWeb)
-- 欢迎使用备用通道：[在线上传音效打标 Mirror →](http://beautify.gushao.club/docs/extra_service/soud/UploadHandWebMirror/)
+- 欢迎使用备用通道：[在线上传音效打标 Mirror →](/docs/extra_service/soud/UploadHandWebMirror/)
 - 此功能支持皮肤（自动加密）、图片素材等文件的在线打标，并提供单邮箱批量打标和多邮箱一对一推送服务。
 
 ### 核心功能特点
