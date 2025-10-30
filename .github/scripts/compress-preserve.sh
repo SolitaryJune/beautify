@@ -32,19 +32,23 @@ fi
 
 echo "截断点 SHA: $CUTOFF_SHA"
 
-# 创建新的孤立分支保留最近的提交
+# 在切换分支前，先获取要保留的提交列表
+echo "正在获取最近 $KEEP_COUNT 次提交列表..."
+COMMITS=$(git rev-list --reverse HEAD~$((KEEP_COUNT - 1))..HEAD)
+COMMIT_COUNT=$(echo "$COMMITS" | wc -l)
+echo "找到 $COMMIT_COUNT 次提交需要迁移"
+
+# 创建新的孤立分支
 TEMP_BRANCH="temp-compress-$(date +%s)"
 git checkout -b "$TEMP_BRANCH"
 
-# 使用 git rebase 保留最近的提交
-# 创建一个新的根提交
+# 创建孤立分支作为新的根
 git checkout --orphan new-root
 git rm -rf .
 git commit --allow-empty -m "Initial commit - Compressed history (原始提交数: $TOTAL_COMMITS)"
 
 # 将最近的 N 次提交 cherry-pick 到新分支
-echo "正在迁移最近 $KEEP_COUNT 次提交..."
-COMMITS=$(git rev-list --reverse HEAD~$KEEP_COUNT..HEAD --ancestry-path)
+echo "正在迁移提交..."
 
 for commit in $COMMITS; do
   if ! git cherry-pick "$commit"; then
