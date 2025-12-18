@@ -65,8 +65,5 @@
   },
   "otherDependencies": {
     "hugo": "0.92.1"
-  },
-  "pre-commit": [
-    "lint"
-  ]
+  }
 }
