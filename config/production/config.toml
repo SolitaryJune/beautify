@@ -1,5 +1,5 @@
-# 使用相对路径，让两个域名都能正常访问
-baseurl = "/"
+# 生产环境主域名
+baseurl = "https://docs.beautify.mp.juneover24.cn/"
 canonifyURLs = false
 sectionPagesMenu = "main"
-relativeURLs = true
+relativeURLs = false

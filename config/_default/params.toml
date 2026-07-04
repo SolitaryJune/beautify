@@ -11,8 +11,7 @@ images = ["Logo.png"]
 ogLocale = "zh_cn"
 ogImageHeight = "320"
 ogImageWidth = "640"
-# 移除硬编码域名，让两个域名都能正常工作
-# domainTLD = "beautify.gushao.club"
+domainTLD = "docs.beautify.mp.juneover24.cn"
 titleHome = "GuShao's Beautify Doc"
 
 ## Twitter Cards
@@ -35,8 +34,7 @@ schemaImageWidth = 289
 schemaImageHeight = 117
 schemaTwitter = ""
 schemaLinkedIn = ""
-# 使用相对路径，避免硬编码域名
-# schemaGitHub = "https://beautify.gushao.club"
+schemaGitHub = "https://docs.beautify.mp.juneover24.cn"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
