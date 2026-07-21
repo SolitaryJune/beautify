@@ -1,9 +1,11 @@
 ---
-title : "起步"
-description: "起步"
-lead: ""
-date: 2021-08-19T08:48:45+00:00
-lastmod: 2021-08-19T08:48:45+00:00
+title: "开始使用"
+description: "JuneOver24 工具箱入口与基本说明。"
+lead: "从微信小程序进入，根据账号状态查看实时工具目录。"
 draft: false
 images: []
+menu:
+  docs:
+    parent: "prologue"
+weight: 10
 ---

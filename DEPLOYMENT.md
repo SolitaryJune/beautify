@@ -1,56 +1,28 @@
-# 新域名部署指南
+# GitHub Pages 部署
 
-本项目生产环境主域名：
+生产文档域名：
 
-- `docs.beautify.mp.juneover24.cn`
+- `https://docs.beautify.mp.juneover24.cn/`
 
-## 核心配置说明
+## 发布流程
 
-生产环境使用固定站点地址，便于生成 sitemap、SEO 元数据和页面内绝对链接。
+1. 提交文档或站点配置变更。
+2. Pull Request 会执行依赖安装、lint 和 Hugo 构建。
+3. `main` 更新后，Pages CI 构建 `public/` 并部署到 GitHub Pages。
+4. 在文档域名验证首页、导航、静态资源、sitemap 和 404 页面。
 
-### 关键配置
-
-- `baseurl = "https://docs.beautify.mp.juneover24.cn/"` - 生产站点地址
-- `relativeURLs = false` - 生产环境不使用相对路径
-- `canonifyURLs = false` - 不强制转换所有链接为绝对路径
-
-## 本地构建
+## 本地验证
 
 ```bash
+npm ci
+npm run lint
 npm run build
+git diff --check
 ```
 
-构建产物在 `public/` 目录。
+## 安全边界
 
-## Vercel 部署配置
-
-1. 在 Vercel 中创建或打开项目
-2. 添加自定义域名：
-   - `docs.beautify.mp.juneover24.cn`
-3. 构建设置：
-   - **构建命令**：`npm run build`
-   - **输出目录**：`public`
-   - **安装命令**：`npm install`
-
-## DNS 配置
-
-将 `docs.beautify.mp.juneover24.cn` 的 DNS 指向部署平台。
-
-### Vercel CNAME 示例
-
-```text
-类型: CNAME
-名称: docs.beautify.mp
-值: cname.vercel-dns.com
-```
-
-实际记录名称请以 DNS 服务商的填写规则为准。
-
-## 验证部署
-
-部署后检查：
-
-1. 访问 `https://docs.beautify.mp.juneover24.cn/` 正常显示
-2. 页面内导航链接保持在新域名下
-3. CSS、JavaScript、图片和字体正常加载
-4. 404 页面 5 秒后跳转到新域名首页
+- Workflow 仅在部署 job 使用 `pages: write` 和 `id-token: write`。
+- Workflow 不重写 Git 历史、不 force-push、不自动删除运行记录。
+- 仓库不使用生产密钥；禁止把私有项目目录或运行态配置复制到本仓库。
+- 独立工具的一方源码、解密私钥和用户身份数据不属于本仓库内容。

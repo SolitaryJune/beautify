@@ -1,10 +1,10 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "GuShao's Beautify"
+title = "JuneOver24 工具箱"
 titleSeparator = "-"
-titleAddition = "文档"
-description = "GuShao's Beautify"
+titleAddition = "官方文档"
+description = "JuneOver24 工具箱官方文档：皮肤、字体、音效与素材处理工具。"
 
 ## Open Graph
 images = ["Logo.png"]
@@ -12,7 +12,7 @@ ogLocale = "zh_cn"
 ogImageHeight = "320"
 ogImageWidth = "640"
 domainTLD = "docs.beautify.mp.juneover24.cn"
-titleHome = "GuShao's Beautify Doc"
+titleHome = "JuneOver24 工具箱官方文档"
 
 ## Twitter Cards
 twitterSite = ""
@@ -20,11 +20,11 @@ twitterCreator = ""
 
 ## JSON-LD
 schemaType = "Organization"
-schemaName = "v2rayA"
-schemaAuthor = "v2rayA"
+schemaName = "JuneOver24"
+schemaAuthor = "JuneOver24"
 schemaAuthorTwitter = ""
 schemaAuthorLinkedIn = ""
-schemaAuthorGitHub = "https://github.com/SolitaryJune/SkinIntroduce"
+schemaAuthorGitHub = "https://github.com/juneover24"
 schemaLocale = "zh-CN"
 schemaLogo = "android-chrome-512x512.png"
 schemaLogoWidth = 512
@@ -34,8 +34,8 @@ schemaImageWidth = 289
 schemaImageHeight = 117
 schemaTwitter = ""
 schemaLinkedIn = ""
-schemaGitHub = "https://docs.beautify.mp.juneover24.cn"
-schemaSection = "blog"
+schemaGitHub = "https://github.com/juneover24/beautify"
+schemaSection = "docs"
 
 ## Sitelinks Search Box
 siteLinksSearchBox = false
@@ -51,22 +51,22 @@ portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
 # Footer
-footer = "CL-EULA | Copyright (c) 2021 - {year} GuShao's Beautify Organization"
-copyright = "Copyright (c) 2021 - {year} GuShao's Beautify Organization"
+footer = "Copyright (c) 2021 - {year} JuneOver24"
+copyright = "Copyright (c) 2021 - {year} JuneOver24"
 
 # Alert
 alert = false
-alertText = "Like v2rayA? <a class=\"alert-link\" href=\"https://github.com/v2rayA/v2rayA/stargazers\">Star on GitHub</a>. Thanks!</a>"
+alertText = ""
 
 # Edit Page
-docsRepo = "https://github.com/SolitaryJune/SkinIntroduce"
+docsRepo = "https://github.com/juneover24/beautify"
 editPage = true
 
 # Contributors
 githubContributors = false
-githubUser = "GuShao's Beautify"
-githubRepo = "GuShao's Beautify"
-githubDocRepo = "solitaryjune.github.io"
+githubUser = "juneover24"
+githubRepo = "beautify"
+githubDocRepo = "beautify"
 githubDocTree = "main"
 githubContributorsAPI = ""
 

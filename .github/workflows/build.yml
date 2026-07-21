@@ -8,316 +8,55 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # 需要写权限以支持 Git 历史操作
-  pages: write
-  id-token: write
-  actions: write  # 需要写权限以删除 workflow runs
+  contents: read
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: "!(github.event_name == 'push' && contains(github.event.head_commit.message, '[skip ci]'))"
     steps:
       - name: Check out project
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - uses: actions/cache@v4  # Updated to v4
-        id: yarn-cache
+        uses: actions/setup-node@v4
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: yarn
+        run: npm ci
 
       - name: Run code quality tools
-        run: yarn lint
+        run: npm run lint
 
-      - name: Build development website
-        if: ${{ github.event_name == 'pull_request' }}
-        run: yarn build --environment development
-
-      - name: Build production website
-        if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
-        run: yarn build
+      - name: Build website
+        run: npm run build
 
       - name: Setup Pages
-        if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
-        id: pages
-        uses: actions/configure-pages@v5  # Updated to v5
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
 
-      - name: Upload artifact
-        if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
-        uses: actions/upload-pages-artifact@v3  # Updated to v3
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
   deploy:
-    if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4  # Updated to v4
-
-  cleanup:
-    if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
-    runs-on: ubuntu-latest
-    needs: [build, deploy]
-    permissions:
-      actions: write
-      contents: write
-    env:
-      CLEANUP_WORKFLOW_RUNS: 'true'
-      CLEANUP_GIT_HISTORY: 'true'
-      KEEP_RUNS_COUNT: '10'
-      KEEP_COMMITS_COUNT: '10'
-      GIT_CLEANUP_STRATEGY: 'preserve'
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: 验证分支和环境
-        run: |
-          echo "::group::环境检查"
-          echo "当前分支: ${{ github.ref }}"
-          echo "事件类型: ${{ github.event_name }}"
-          
-          if [ "${{ github.ref }}" != "refs/heads/main" ]; then
-            echo "::error::清理功能仅在 main 分支执行"
-            exit 1
-          fi
-          
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            echo "::error::清理功能不在 Pull Request 中执行"
-            exit 1
-          fi
-          
-          echo "✓ 环境检查通过"
-          echo "::endgroup::"
-
-      - name: 验证权限
-        run: |
-          echo "::group::权限检查"
-          
-          if [ -z "${{ github.token }}" ]; then
-            echo "::error::GITHUB_TOKEN 未设置"
-            exit 1
-          fi
-          
-          echo "✓ GITHUB_TOKEN 已配置"
-          
-          # 检查 token 权限（通过尝试访问 API）
-          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
-            -H "Authorization: token ${{ github.token }}" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=1")
-          
-          if [ "$RESPONSE" = "200" ]; then
-            echo "✓ Actions API 访问权限正常"
-          else
-            echo "::warning::Actions API 访问返回状态码: $RESPONSE"
-            echo "可能缺少 actions:write 权限，workflow runs 清理可能失败"
-          fi
-          
-          echo "::endgroup::"
-
-      - name: 获取清理前的 Workflow Runs 统计
-        if: env.CLEANUP_WORKFLOW_RUNS == 'true'
-        id: runs-before
-        run: |
-          echo "::group::清理前统计"
-          RUNS_COUNT=$(curl -s -H "Authorization: token ${{ github.token }}" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" | \
-            jq '.total_count')
-          echo "当前 Workflow Runs 总数: $RUNS_COUNT"
-          echo "runs_count=$RUNS_COUNT" >> $GITHUB_OUTPUT
-          echo "::endgroup::"
-
-      - name: 清理旧的 Workflow Runs
-        if: env.CLEANUP_WORKFLOW_RUNS == 'true'
-        id: cleanup-runs
-        continue-on-error: true
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          token: ${{ github.token }}
-          repository: ${{ github.repository }}
-          retain_days: 0
-          keep_minimum_runs: ${{ env.KEEP_RUNS_COUNT }}
-
-      - name: 获取清理后的 Workflow Runs 统计
-        if: env.CLEANUP_WORKFLOW_RUNS == 'true'
-        run: |
-          echo "::group::清理后统计"
-          RUNS_COUNT=$(curl -s -H "Authorization: token ${{ github.token }}" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" | \
-            jq '.total_count')
-          echo "清理后 Workflow Runs 总数: $RUNS_COUNT"
-          DELETED=$(($${{ steps.runs-before.outputs.runs_count }} - $RUNS_COUNT))
-          echo "已删除 Workflow Runs 数量: $DELETED"
-          echo "::endgroup::"
-
-      - name: 检查清理结果
-        if: env.CLEANUP_WORKFLOW_RUNS == 'true' && steps.cleanup-runs.outcome == 'failure'
-        run: |
-          echo "::warning::Workflow Runs 清理失败，但不影响主流程"
-          echo "::error::清理错误详情: ${{ steps.cleanup-runs.outputs.error }}"
-          echo "请检查权限配置或手动清理"
-
-      - name: 危险操作警告
-        if: env.CLEANUP_GIT_HISTORY == 'true'
-        run: |
-          echo "::warning::⚠️  Git 历史压缩已启用 - 这是一个危险操作！"
-          echo "::warning::此操作将："
-          echo "::warning::  - 重写 Git 历史"
-          echo "::warning::  - 使所有协作者需要重新克隆仓库"
-          echo "::warning::  - 使现有 Pull Requests 失效"
-          echo "::warning::  - 可能丢失历史追溯信息"
-          echo ""
-          echo "备份标签将被创建以便紧急恢复"
-
-      - name: 加载 Git 清理配置
-        if: env.CLEANUP_GIT_HISTORY == 'true'
-        run: |
-          chmod +x .github/scripts/cleanup-config.sh
-          .github/scripts/cleanup-config.sh
-
-      - name: 创建备份标签
-        if: env.CLEANUP_GIT_HISTORY == 'true'
-        id: backup
-        continue-on-error: true
-        run: |
-          chmod +x .github/scripts/create-backup.sh
-          .github/scripts/create-backup.sh
-
-      - name: 压缩 Git 历史 (保留策略)
-        if: env.CLEANUP_GIT_HISTORY == 'true' && env.GIT_CLEANUP_STRATEGY == 'preserve'
-        id: compress-preserve
-        continue-on-error: true
-        run: |
-          chmod +x .github/scripts/compress-preserve.sh
-          .github/scripts/compress-preserve.sh
-
-      - name: 压缩 Git 历史 (完全压缩策略)
-        if: env.CLEANUP_GIT_HISTORY == 'true' && env.GIT_CLEANUP_STRATEGY == 'squash'
-        id: compress-squash
-        continue-on-error: true
-        run: |
-          chmod +x .github/scripts/compress-squash.sh
-          .github/scripts/compress-squash.sh
-
-      - name: Force Push 到远程
-        if: env.CLEANUP_GIT_HISTORY == 'true' && (steps.compress-preserve.outcome == 'success' || steps.compress-squash.outcome == 'success')
-        id: force-push
-        continue-on-error: true
-        run: |
-          chmod +x .github/scripts/force-push.sh
-          .github/scripts/force-push.sh
-
-      - name: 验证压缩结果
-        if: env.CLEANUP_GIT_HISTORY == 'true' && steps.force-push.outcome == 'success'
-        run: |
-          echo "::group::压缩结果验证"
-          COMMITS_AFTER=$(git rev-list --count HEAD)
-          echo "压缩后提交数: $COMMITS_AFTER"
-          
-          if [ "$GIT_CLEANUP_STRATEGY" = "squash" ]; then
-            if [ "$COMMITS_AFTER" -eq 1 ]; then
-              echo "✓ 完全压缩成功，历史已压缩为单个提交"
-            else
-              echo "::warning::完全压缩后提交数不为 1，实际为 $COMMITS_AFTER"
-            fi
-          else
-            if [ "$COMMITS_AFTER" -le "$KEEP_COMMITS_COUNT" ]; then
-              echo "✓ 保留策略压缩成功，保留了 $COMMITS_AFTER 次提交"
-            else
-              echo "::warning::保留的提交数 ($COMMITS_AFTER) 超过预期 ($KEEP_COMMITS_COUNT)"
-            fi
-          fi
-          
-          echo "备份标签: ${{ steps.backup.outputs.backup_tag }}"
-          echo "新的 HEAD SHA: ${{ steps.force-push.outputs.pushed_sha }}"
-          echo "::endgroup::"
-
-      - name: 自动回滚
-        if: env.CLEANUP_GIT_HISTORY == 'true' && steps.force-push.outcome == 'failure' && steps.backup.outcome == 'success'
-        run: |
-          echo "::warning::检测到 force push 失败，尝试自动回滚..."
-          chmod +x .github/scripts/rollback.sh
-          if .github/scripts/rollback.sh "${{ steps.backup.outputs.backup_tag }}"; then
-            echo "✓ 自动回滚成功"
-          else
-            echo "::error::自动回滚失败，需要手动恢复"
-          fi
-
-      - name: 检查 Git 压缩错误
-        if: env.CLEANUP_GIT_HISTORY == 'true' && (steps.compress-preserve.outcome == 'failure' || steps.compress-squash.outcome == 'failure' || steps.force-push.outcome == 'failure')
-        run: |
-          echo "::error::Git 历史压缩失败"
-          echo "备份标签: ${{ steps.backup.outputs.backup_tag }}"
-          echo ""
-          echo "手动恢复命令:"
-          echo "  git fetch origin"
-          echo "  git reset --hard ${{ steps.backup.outputs.backup_tag }}"
-          echo "  git push -f origin main"
-
-      - name: 生成清理报告
-        if: always()
-        run: |
-          echo "# 清理任务报告" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "## 执行时间" >> $GITHUB_STEP_SUMMARY
-          echo "- 开始时间: $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          
-          echo "## Workflow Runs 清理" >> $GITHUB_STEP_SUMMARY
-          if [ "${{ env.CLEANUP_WORKFLOW_RUNS }}" = "true" ]; then
-            if [ "${{ steps.cleanup-runs.outcome }}" = "success" ]; then
-              echo "✅ 成功" >> $GITHUB_STEP_SUMMARY
-              echo "- 清理前: ${{ steps.runs-before.outputs.runs_count }} 次运行" >> $GITHUB_STEP_SUMMARY
-              echo "- 保留数量: ${{ env.KEEP_RUNS_COUNT }}" >> $GITHUB_STEP_SUMMARY
-            else
-              echo "❌ 失败" >> $GITHUB_STEP_SUMMARY
-            fi
-          else
-            echo "⏭️ 已跳过" >> $GITHUB_STEP_SUMMARY
-          fi
-          echo "" >> $GITHUB_STEP_SUMMARY
-          
-          echo "## Git 历史压缩" >> $GITHUB_STEP_SUMMARY
-          if [ "${{ env.CLEANUP_GIT_HISTORY }}" = "true" ]; then
-            if [ "${{ steps.force-push.outcome }}" = "success" ]; then
-              echo "✅ 成功" >> $GITHUB_STEP_SUMMARY
-              echo "- 策略: ${{ env.GIT_CLEANUP_STRATEGY }}" >> $GITHUB_STEP_SUMMARY
-              echo "- 备份标签: \`${{ steps.backup.outputs.backup_tag }}\`" >> $GITHUB_STEP_SUMMARY
-              echo "- 新的 HEAD: \`${{ steps.force-push.outputs.pushed_sha }}\`" >> $GITHUB_STEP_SUMMARY
-            else
-              echo "❌ 失败" >> $GITHUB_STEP_SUMMARY
-              if [ -n "${{ steps.backup.outputs.backup_tag }}" ]; then
-                echo "- 备份标签: \`${{ steps.backup.outputs.backup_tag }}\`" >> $GITHUB_STEP_SUMMARY
-              fi
-            fi
-          else
-            echo "⏭️ 已跳过（默认禁用）" >> $GITHUB_STEP_SUMMARY
-          fi
-          echo "" >> $GITHUB_STEP_SUMMARY
-          
-          echo "---" >> $GITHUB_STEP_SUMMARY
-          echo "📝 查看详细日志以获取更多信息" >> $GITHUB_STEP_SUMMARY
+        uses: actions/deploy-pages@v4
