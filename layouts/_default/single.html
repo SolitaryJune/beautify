@@ -1,10 +1,10 @@
 {{ define "main" }}
-<div class="row justify-content-center">
-  <div class="col-md-12 col-lg-10 col-xl-8">
-    <article>
-      <h1>{{ .Title }}</h1>
-      {{ .Content }}
-    </article>
-  </div>
-</div>
+<main class="standalone-page glass-panel">
+  <span class="section-kicker">JUNEOVER24 · TOOLBOX</span>
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p class="standalone-lead">{{ . }}</p>{{ end }}
+  <article class="docs-article">
+    {{ .Content }}
+  </article>
+</main>
 {{ end }}

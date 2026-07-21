@@ -1,39 +1,39 @@
 {{ define "main" }}
-<div class="row justify-content-center">
-  <div class="col-md-12 col-lg-10 col-xl-8">
-    <article>
-      <h1 class="text-center">{{ .Title }}</h1>
-      <div class="text-center">{{ .Content }}</div>
-			<div class="card-list">
-				{{ $currentPage := . }}
-				{{ $currentSection := .CurrentSection }}
-        {{ $target := . }}
-        {{ if eq .Parent.RelPermalink "/" }}
-          {{ range .Site.Menus.docs }}
-            {{ $u := .URL }}
-            {{ range $currentPage.Site.Pages }}
-            {{ if and (eq .RelPermalink $u) (eq $currentPage .Parent) (in (.RelPermalink | string) $currentSection.RelPermalink) }}
-            <div class="card my-3">
-              <div class="card-body">
-                <a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title | title }} &rarr;</a>
-              </div>
-            </div>
-            {{ end }}
-            {{ end }}
-          {{ end }}
-        {{ else }}
-          {{ range where .Site.Pages.ByWeight "Section" .Section }}
-          {{ if and (eq $currentPage .Parent) (in (.RelPermalink | string) $currentSection.RelPermalink) }}
-          <div class="card my-3">
-            <div class="card-body">
-              <a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title | title }} &rarr;</a>
-            </div>
-          </div>
-          {{ end }}
+<main class="docs-index-page">
+  <section class="docs-index-hero">
+    <span class="section-kicker">DOCUMENTATION</span>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p>{{ . }}</p>{{ end }}
+    {{ .Content }}
+  </section>
+
+  <section class="docs-index-grid">
+    {{ $currentPage := . }}
+    {{ $currentSection := .CurrentSection }}
+    {{ if eq .Parent.RelPermalink "/" }}
+      {{ range .Site.Menus.docs }}
+        {{ $url := .URL }}
+        {{ range $currentPage.Site.Pages }}
+          {{ if and (eq .RelPermalink $url) (eq $currentPage .Parent) (in (.RelPermalink | string) $currentSection.RelPermalink) }}
+            <a class="docs-index-card glass-panel" href="{{ .RelPermalink }}">
+              <span class="docs-card-number">{{ printf "%02d" .Weight }}</span>
+              <div><h2>{{ .Title }}</h2><p>{{ .Params.description }}</p></div>
+              <i aria-hidden="true">↗</i>
+            </a>
           {{ end }}
         {{ end }}
-			</div>
-    </article>
-  </div>
-</div>
+      {{ end }}
+    {{ else }}
+      {{ range where .Site.Pages.ByWeight "Section" .Section }}
+        {{ if and (eq $currentPage .Parent) (in (.RelPermalink | string) $currentSection.RelPermalink) }}
+          <a class="docs-index-card glass-panel" href="{{ .RelPermalink }}">
+            <span class="docs-card-number">{{ printf "%02d" .Weight }}</span>
+            <div><h2>{{ .Title }}</h2><p>{{ .Params.description }}</p></div>
+            <i aria-hidden="true">↗</i>
+          </a>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </section>
+</main>
 {{ end }}

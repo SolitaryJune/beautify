@@ -1,18 +1,15 @@
-<footer class="footer text-muted">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 order-last order-lg-first">
-        <ul class="list-inline">
-          <li class="list-inline-item">{{ replace .Site.Params.footer "{year}"  (now.Format "2006") | safeHTML }}</li>
-        </ul>
-      </div>
-      <div class="col-lg-8 order-first order-lg-last text-lg-end">
-        <ul class="list-inline">
-          {{ range .Site.Menus.footer -}}
-            <li class="list-inline-item"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-          {{ end -}}
-        </ul>
-      </div>
+<footer class="site-footer">
+  <div class="footer-shell">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <div><strong>JuneOver24</strong><small>让创作流程更轻盈</small></div>
     </div>
+    <nav aria-label="页脚导航">
+      <a href="{{ "/docs/" | relLangURL }}">使用文档</a>
+      <a href="{{ "/docs/tools/" | relLangURL }}">工具概览</a>
+      <a href="{{ "/docs/help/" | relLangURL }}">帮助</a>
+      <a href="https://status.beautify.mp.juneover24.cn/" target="_blank" rel="noopener noreferrer">服务状态</a>
+    </nav>
+    <p>© 2021–{{ now.Format "2006" }} JuneOver24</p>
   </div>
 </footer>

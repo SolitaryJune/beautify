@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
+<html lang="{{ .Site.LanguageCode | default "zh-cn" }}">
   {{ partial "head/head.html" . }}
   {{ if eq .Kind "home" -}}
     {{ .Scratch.Set "class" "home" -}}
@@ -13,18 +13,21 @@
     {{ .Scratch.Add "class" " list" -}}
   {{ end -}}
   <body class="{{ .Scratch.Get "class" }}">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <div class="site-ambient" aria-hidden="true">
+      <span class="ambient-orb ambient-orb-one"></span>
+      <span class="ambient-orb ambient-orb-two"></span>
+      <span class="ambient-grid"></span>
+    </div>
     {{ partial "header/header.html" . }}
-    <div class="wrap container" role="document">
-      <div class="content">
+    <div class="site-shell" role="document">
+      <div class="site-content" id="main-content">
         {{ block "main" . }}{{ end }}
       </div>
     </div>
     {{ block "sidebar-prefooter" . }}{{ end }}
     {{ block "sidebar-footer" . }}{{ end }}
     {{ partial "footer/footer.html" . }}
-    {{ if and .IsHome .Site.Params.alert }}
-      {{ partial "footer/alert.html" . }}
-    {{ end }}
     {{ partial "footer/script-footer.html" . }}
   </body>
 </html>

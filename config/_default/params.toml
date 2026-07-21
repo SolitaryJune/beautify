@@ -22,9 +22,6 @@ twitterCreator = ""
 schemaType = "Organization"
 schemaName = "JuneOver24"
 schemaAuthor = "JuneOver24"
-schemaAuthorTwitter = ""
-schemaAuthorLinkedIn = ""
-schemaAuthorGitHub = "https://github.com/juneover24"
 schemaLocale = "zh-CN"
 schemaLogo = "android-chrome-512x512.png"
 schemaLogoWidth = 512
@@ -32,16 +29,13 @@ schemaLogoHeight = 512
 schemaImage = "Logo.png"
 schemaImageWidth = 289
 schemaImageHeight = 117
-schemaTwitter = ""
-schemaLinkedIn = ""
-schemaGitHub = "https://github.com/juneover24/beautify"
 schemaSection = "docs"
 
 ## Sitelinks Search Box
 siteLinksSearchBox = false
 
 ## Chrome Browser
-themeColor = "#fff"
+themeColor = "#070912"
 
 # Images
 quality = 85
@@ -58,28 +52,16 @@ copyright = "Copyright (c) 2021 - {year} JuneOver24"
 alert = false
 alertText = ""
 
-# Edit Page
-docsRepo = "https://github.com/juneover24/beautify"
-editPage = true
-
-# Contributors
-githubContributors = false
-githubUser = "juneover24"
-githubRepo = "beautify"
-githubDocRepo = "beautify"
-githubDocTree = "main"
-githubContributorsAPI = ""
-
 [options]
-  lazySizes = true
-  clipBoard = true
-  instantPage = true
-  flexSearch = true
-  darkMode = true
-  bootStrapJs = true
+  lazySizes = false
+  clipBoard = false
+  instantPage = false
+  flexSearch = false
+  darkMode = false
+  bootStrapJs = false
   breadCrumb = true
-  highLight = true
-  kaTex = true
+  highLight = false
+  kaTex = false
   collapsibleSidebar = true
   docsNavigation = true
   lastModified = true

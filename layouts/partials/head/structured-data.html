@@ -30,17 +30,6 @@
       {{ end -}}
       "name": "{{ .Site.Params.schemaName }}",
       "url": {{ print $baseURL }},
-      "sameAs": [
-        {{ with .Site.Params.schemaTwitter -}}
-        {{ . }}
-        {{ end -}}
-        {{ with .Site.Params.schemaLinkedIn -}}
-        , {{ . }}
-        {{ end -}}
-        {{ with .Site.Params.schemaGitHub -}}
-        , {{ . }}
-        {{ end -}}
-      ],
       {{ if eq .Site.Params.schemaType "Organization" -}}
         "logo": {
           "@type": "ImageObject",
@@ -176,18 +165,7 @@
         {
           "@type": "Person",
           "@id": {{ print $baseURL "#/schema/person/2" }},
-          "name": {{ .Site.Params.schemaAuthor }},
-          "sameAs": [
-            {{ with .Site.Params.schemaAuthorTwitter -}}
-            {{ . }}
-            {{ end -}}
-            {{ with .Site.Params.schemaAuthorLinkedIn -}}
-            , {{ . }}
-            {{ end -}}
-            {{ with .Site.Params.schemaAuthorGitHub -}}
-            , {{ . }}
-            {{ end -}}
-          ]
+          "name": {{ .Site.Params.schemaAuthor }}
         }
       ]
     },

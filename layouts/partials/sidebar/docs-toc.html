@@ -1,6 +1,7 @@
 {{ if ne .Params.toc false -}}
-  <div class="page-links">
-    <h3>{{ T "onThisPage" }}</h3>
+  <div class="modern-toc">
+    <span>ON THIS PAGE</span>
+    <strong>本页目录</strong>
     {{ .TableOfContents }}
   </div>
 {{ end -}}

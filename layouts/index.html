@@ -1,40 +1,129 @@
 {{ define "main" }}
-<section class="section container-fluid mt-n3 pb-3">
-  <div class="row justify-content-center">
-    <div class="col-lg-12 text-center">
-      <h1 class="mt-0">{{ .Title }}</h1>
+<main class="landing-page">
+  <section class="hero-section">
+    <div class="hero-copy">
+      <div class="eyebrow"><span></span> JUNEOVER24 · CREATIVE TOOLBOX</div>
+      <h1><span>把复杂的</span><span>创作流程，</span><em>变得轻盈。</em></h1>
+      <p class="hero-lead">为皮肤、字体、音效与素材创作打造的一站式工具箱。入口统一、权限清晰，让每一次处理都更专注。</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="{{ "/docs/access/" | relLangURL }}">
+          <span>开始使用</span><i aria-hidden="true">↗</i>
+        </a>
+        <a class="button button-ghost" href="{{ "/docs/tools/" | relLangURL }}">浏览工具</a>
+      </div>
+      <div class="hero-trust">
+        <span><i class="signal-dot"></i>服务在线</span>
+        <span>动态权限</span>
+        <span>受控工作区</span>
+      </div>
     </div>
-    <div class="col-lg-9 col-xl-8 text-center">
-      <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Params.getStarted | relLangURL }}" role="button">{{ T "getStarted" }}</a>
-      <!-- 版本号注释 -->
-   
-    </div>
-  </div>
-</section>
-{{ end }}
 
-{{ define "sidebar-prefooter" }}
-<section class="section section-sm">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      {{ range .Params.features }}
-      <div class="col-lg-5">
-      <h2 class="h4">{{.title}}</h2>
-      <p>{{.description | markdownify }}</p>
+    <div class="hero-visual" aria-label="工具箱能力概览">
+      <div class="visual-glow"></div>
+      <div class="command-card glass-panel">
+        <div class="command-header">
+          <div class="window-dots"><i></i><i></i><i></i></div>
+          <span>CREATIVE FLOW</span>
+          <b>LIVE</b>
+        </div>
+        <div class="command-body">
+          <div class="flow-node flow-node-main">
+            <span class="node-icon">24</span>
+            <div><small>WORKSPACE</small><strong>创作中枢</strong></div>
+            <i>●</i>
+          </div>
+          <div class="flow-line"><span></span></div>
+          <div class="flow-grid">
+            <div class="flow-node"><span class="node-symbol">◫</span><strong>皮肤</strong><small>SKIN</small></div>
+            <div class="flow-node"><span class="node-symbol">Aa</span><strong>字体</strong><small>FONT</small></div>
+            <div class="flow-node"><span class="node-symbol">⌁</span><strong>音效</strong><small>AUDIO</small></div>
+            <div class="flow-node"><span class="node-symbol">◇</span><strong>素材</strong><small>ASSET</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-chip floating-chip-top"><span>✓</span> 权限已同步</div>
+      <div class="floating-chip floating-chip-bottom"><i></i> WORKFLOW READY</div>
     </div>
-      {{ end }}
-    </div>
-  </div>
-</section>
-{{ end }}
+  </section>
 
-{{ define "sidebar-footer" }}
-<section class="section section-sm container-fluid">
-  <div class="row justify-content-center text-center">
-    <div class="col-lg-9">
-      {{- .Content -}}
+  <section class="metric-strip" aria-label="平台特点">
+    <div><strong>4</strong><span>核心工具分类</span></div>
+    <div><strong>1</strong><span>统一使用入口</span></div>
+    <div><strong>LIVE</strong><span>实时权限状态</span></div>
+    <div><strong>SAFE</strong><span>受控网页工作区</span></div>
+  </section>
+
+  <section class="feature-section" id="features">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">CAPABILITIES</span>
+        <h2>一套工具箱，覆盖完整创作链路</h2>
+      </div>
+      <p>从文件处理到创作辅助，从手动打标到独立工作区，工具会根据当前账号权限实时呈现。</p>
     </div>
-  </div>
-</section>
+
+    <div class="feature-grid">
+      <article class="feature-card feature-card-wide glass-panel">
+        <div class="feature-index">01</div>
+        <div class="feature-icon icon-skin"><span>◫</span></div>
+        <h3>皮肤工具</h3>
+        <p>处理、转系统、改色、前景、动效、预览、瘦身与底包能力，覆盖高频创作流程。</p>
+        <ul><li>皮肤处理 Pro</li><li>前景与融合底</li><li>素材分割</li></ul>
+        <a href="{{ "/docs/tools/#皮肤工具" | relLangURL }}">查看能力 <span>→</span></a>
+      </article>
+
+      <article class="feature-card glass-panel">
+        <div class="feature-index">02</div>
+        <div class="feature-icon icon-font"><span>Aa</span></div>
+        <h3>字体工具</h3>
+        <p>字体调整、修符与多种手动打标流程，从小程序安全进入受控工作区。</p>
+        <a href="{{ "/docs/tools/#字体工具" | relLangURL }}">查看能力 <span>→</span></a>
+      </article>
+
+      <article class="feature-card glass-panel">
+        <div class="feature-index">03</div>
+        <div class="feature-icon icon-audio"><span>⌁</span></div>
+        <h3>音效工具</h3>
+        <p>统一的音频转换能力，入口与授权状态由工具目录动态提供。</p>
+        <a href="{{ "/docs/tools/#音效工具" | relLangURL }}">查看能力 <span>→</span></a>
+      </article>
+
+      <article class="feature-card feature-card-wide glass-panel">
+        <div class="feature-index">04</div>
+        <div class="feature-icon icon-asset"><span>◇</span></div>
+        <h3>素材工具</h3>
+        <p>抠图、分割、对标、配套、色值与 XML 修改，连接图片与 PSD 创作场景。</p>
+        <ul><li>一键配套</li><li>PSD 图层分割</li><li>素材手动打标</li></ul>
+        <a href="{{ "/docs/tools/#素材工具" | relLangURL }}">查看能力 <span>→</span></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="workflow-section">
+    <div class="workflow-copy">
+      <span class="section-kicker">HOW IT WORKS</span>
+      <h2>从入口到结果，三步完成</h2>
+      <p>无需记忆散落的网页地址。通过统一入口完成身份识别、权限匹配和工具启动。</p>
+      <a class="text-link" href="{{ "/docs/access/" | relLangURL }}">阅读入口与权限说明 <span>→</span></a>
+    </div>
+    <ol class="workflow-steps glass-panel">
+      <li><span>01</span><div><strong>打开工具箱</strong><p>进入微信小程序 JuneOver24 工具箱。</p></div></li>
+      <li><span>02</span><div><strong>匹配实时权限</strong><p>系统根据账号、会员、试用与专区权益展示工具。</p></div></li>
+      <li><span>03</span><div><strong>开始创作</strong><p>按页面引导在小程序或受控网页工作区完成处理。</p></div></li>
+    </ol>
+  </section>
+
+  <section class="cta-section glass-panel">
+    <div class="cta-orb" aria-hidden="true"></div>
+    <div>
+      <span class="section-kicker">READY WHEN YOU ARE</span>
+      <h2>让工具回归简单，让创作保持自由。</h2>
+      <p>查看使用文档，了解实时工具目录、权限状态与工作区入口。</p>
+    </div>
+    <div class="cta-actions">
+      <a class="button button-primary" href="{{ "/docs/" | relLangURL }}">进入文档 <i>↗</i></a>
+      <a class="button button-ghost" href="https://status.beautify.mp.juneover24.cn/" target="_blank" rel="noopener noreferrer">服务状态</a>
+    </div>
+  </section>
+</main>
 {{ end }}

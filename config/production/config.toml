@@ -1,5 +1,4 @@
 # 生产环境主域名
 baseurl = "https://docs.beautify.mp.juneover24.cn/"
 canonifyURLs = false
-sectionPagesMenu = "main"
 relativeURLs = false
