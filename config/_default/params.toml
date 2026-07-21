@@ -35,7 +35,7 @@ schemaSection = "docs"
 siteLinksSearchBox = false
 
 ## Chrome Browser
-themeColor = "#070912"
+themeColor = "#f4efe6"
 
 # Images
 quality = 85

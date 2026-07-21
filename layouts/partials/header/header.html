@@ -18,8 +18,8 @@
       {{ range .Site.Menus.main -}}
         <a href="{{ .URL | safeURL }}"{{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Name }}</a>
       {{ end -}}
-      <a class="nav-status" href="https://status.beautify.mp.juneover24.cn/" target="_blank" rel="noopener noreferrer">
-        <span></span>服务状态
+      <a class="nav-status" href="{{ "/#service-status" | relLangURL }}">
+        <span aria-hidden="true"></span>服务状态
       </a>
     </nav>
   </div>

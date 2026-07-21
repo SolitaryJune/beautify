@@ -12,37 +12,26 @@
         <a class="button button-ghost" href="{{ "/docs/tools/" | relLangURL }}">浏览工具</a>
       </div>
       <div class="hero-trust">
-        <span><i class="signal-dot"></i>服务在线</span>
+        <span><i class="signal-dot" aria-hidden="true"></i><span data-status-summary>正在读取服务状态</span></span>
         <span>动态权限</span>
         <span>受控工作区</span>
       </div>
     </div>
 
     <div class="hero-visual" aria-label="工具箱能力概览">
-      <div class="visual-glow"></div>
-      <div class="command-card glass-panel">
-        <div class="command-header">
-          <div class="window-dots"><i></i><i></i><i></i></div>
-          <span>CREATIVE FLOW</span>
-          <b>LIVE</b>
+      <div class="editorial-figure">
+        <div class="figure-heading">
+          <span>CREATIVE SYSTEM</span>
+          <strong>04 / 01</strong>
         </div>
-        <div class="command-body">
-          <div class="flow-node flow-node-main">
-            <span class="node-icon">24</span>
-            <div><small>WORKSPACE</small><strong>创作中枢</strong></div>
-            <i>●</i>
-          </div>
-          <div class="flow-line"><span></span></div>
-          <div class="flow-grid">
-            <div class="flow-node"><span class="node-symbol">◫</span><strong>皮肤</strong><small>SKIN</small></div>
-            <div class="flow-node"><span class="node-symbol">Aa</span><strong>字体</strong><small>FONT</small></div>
-            <div class="flow-node"><span class="node-symbol">⌁</span><strong>音效</strong><small>AUDIO</small></div>
-            <div class="flow-node"><span class="node-symbol">◇</span><strong>素材</strong><small>ASSET</small></div>
-          </div>
+        <div class="figure-mark" aria-hidden="true"><span>24</span></div>
+        <div class="figure-grid">
+          <div><span>01</span><strong>皮肤</strong><small>SKIN</small></div>
+          <div><span>02</span><strong>字体</strong><small>TYPE</small></div>
+          <div><span>03</span><strong>音效</strong><small>AUDIO</small></div>
+          <div><span>04</span><strong>素材</strong><small>ASSET</small></div>
         </div>
       </div>
-      <div class="floating-chip floating-chip-top"><span>✓</span> 权限已同步</div>
-      <div class="floating-chip floating-chip-bottom"><i></i> WORKFLOW READY</div>
     </div>
   </section>
 
@@ -113,8 +102,25 @@
     </ol>
   </section>
 
-  <section class="cta-section glass-panel">
-    <div class="cta-orb" aria-hidden="true"></div>
+  <section class="status-section" id="service-status" data-service-status>
+    <div class="status-copy">
+      <span class="section-kicker">SERVICE STATUS</span>
+      <h2>服务状态，直接呈现。</h2>
+      <p>官网直接读取公开状态 API，只展示小程序核心服务的最新状态。</p>
+    </div>
+    <div class="status-card is-loading" data-status-card aria-live="polite">
+      <div class="status-main">
+        <span class="status-indicator" aria-hidden="true"></span>
+        <div>
+          <strong data-status-text>正在读取服务状态</strong>
+          <span data-status-detail>正在连接公开状态 API</span>
+        </div>
+      </div>
+      <time data-status-updated>等待首次同步</time>
+    </div>
+  </section>
+
+  <section class="cta-section">
     <div>
       <span class="section-kicker">READY WHEN YOU ARE</span>
       <h2>让工具回归简单，让创作保持自由。</h2>
@@ -122,7 +128,7 @@
     </div>
     <div class="cta-actions">
       <a class="button button-primary" href="{{ "/docs/" | relLangURL }}">进入文档 <i>↗</i></a>
-      <a class="button button-ghost" href="https://status.beautify.mp.juneover24.cn/" target="_blank" rel="noopener noreferrer">服务状态</a>
+      <a class="button button-ghost" href="#service-status">查看服务状态</a>
     </div>
   </section>
 </main>

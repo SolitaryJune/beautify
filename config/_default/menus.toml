@@ -17,24 +17,43 @@ identifier = "access"
 url = "/docs/access/"
 
 [[docs]]
-name = "创作者与打标者"
+name = "会员专区与取件"
 weight = 40
+identifier = "member-mark"
+url = "/docs/member-mark/"
+
+[[docs]]
+name = "打标者与作者"
+weight = 50
+identifier = "marker-authors"
+url = "/docs/marker-authors/"
+
+[[docs]]
+name = "创作者中心"
+weight = 60
 identifier = "creators"
 url = "/docs/creators/"
 
 [[docs]]
-name = "帮助"
-weight = 50
+name = "Bot 群管理"
+weight = 70
+identifier = "bot"
+url = "/docs/bot/"
+
+[[docs]]
+name = "视频教程"
+weight = 80
+identifier = "tool-tutorials"
+url = "/docs/tool-tutorials/"
+
+[[docs]]
+name = "帮助与迁移"
+weight = 90
 identifier = "help"
 url = "/docs/help/"
 
 [[docs]]
 name = "关于"
-weight = 60
+weight = 100
 identifier = "about"
 url = "/docs/about/"
-
-[[main]]
-name = "工具域"
-url = "https://tools.beautify.mp.juneover24.cn/"
-weight = 10

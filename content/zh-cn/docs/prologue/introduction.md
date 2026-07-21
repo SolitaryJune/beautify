@@ -2,14 +2,14 @@
 title: "项目介绍"
 description: "JuneOver24 工具箱当前入口和功能边界。"
 lead: "面向皮肤、字体、音效与素材创作流程的微信小程序工具箱。"
-date: 2026-07-21T00:00:00+08:00
-lastmod: 2026-07-21T00:00:00+08:00
+date: 2026-07-22T00:00:00+08:00
+lastmod: 2026-07-22T00:00:00+08:00
 draft: false
 images: []
 menu:
   docs:
     parent: "prologue"
-weight: 10
+weight: 11
 toc: true
 ---
 
@@ -39,7 +39,6 @@ toc: true
 ## 公开服务
 
 - [官方文档](https://docs.beautify.mp.juneover24.cn/)
-- [独立工具域](https://tools.beautify.mp.juneover24.cn/)
-- [公开状态页](https://status.beautify.mp.juneover24.cn/)
+- 服务状态可在官网首页直接查看。
 
-独立工具域用于承载受控网页工作区。能够访问公开静态资源，不等于账号已获得工具权限。
+受控网页工作区应从小程序内对应工具进入。能够访问公开静态资源，不等于账号已获得工具权限。

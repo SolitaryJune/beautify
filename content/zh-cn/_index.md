@@ -22,7 +22,7 @@ features:
     description: |
       字体调整、字体修符和 PSD 图层分割等工作区由小程序授权后进入。公开静态页面不代表已获得对应权限。
 
-      [打开工具域 →](https://tools.beautify.mp.juneover24.cn/)
+      [查看入口说明 →](/docs/access/)
 
   - title: "创作者与打标者"
     description: |
@@ -32,9 +32,9 @@ features:
 
   - title: "实时状态"
     description: |
-      服务状态、工具应急信息及维护公告以公开状态页为准。
+      官网首页直接读取公开状态数据，展示小程序核心服务的最新状态。
 
-      [查看状态页 →](https://status.beautify.mp.juneover24.cn/)
+      [查看服务状态 →](/#service-status)
 
   - title: "动态权限"
     description: |

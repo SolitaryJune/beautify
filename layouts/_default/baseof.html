@@ -14,11 +14,6 @@
   {{ end -}}
   <body class="{{ .Scratch.Get "class" }}">
     <a class="skip-link" href="#main-content">跳到主要内容</a>
-    <div class="site-ambient" aria-hidden="true">
-      <span class="ambient-orb ambient-orb-one"></span>
-      <span class="ambient-orb ambient-orb-two"></span>
-      <span class="ambient-grid"></span>
-    </div>
     {{ partial "header/header.html" . }}
     <div class="site-shell" role="document">
       <div class="site-content" id="main-content">

@@ -2,6 +2,8 @@
 title: "开始使用"
 description: "JuneOver24 工具箱入口与基本说明。"
 lead: "从微信小程序进入，根据账号状态查看实时工具目录。"
+date: 2026-07-22T00:00:00+08:00
+lastmod: 2026-07-22T00:00:00+08:00
 draft: false
 images: []
 menu:
